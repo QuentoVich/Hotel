@@ -1,0 +1,55 @@
+Sub Create_Tables()
+
+DoCmd.RunSQL "CREATE TABLE CLIENT(" & _
+   "cod_client INT," & _
+   "prenom_Client VARCHAR(50)," & _
+   "tele_Client SMALLINT," & _
+   "Nationalité VARCHAR(50)," & _
+   "Num_Passe INT," & _
+   "adresse_Client VARCHAR(50)," & _
+   "PRIMARY KEY(cod_client)" & _
+");"   
+
+DoCmd.RunSQL "CREATE TABLE CATEGORIE(" & _
+   "Code_categorie INT," & _
+   "désignation VARCHAR(50)," & _
+   "PRIMARY KEY(Code_categorie)" & _
+");"   
+
+DoCmd.RunSQL "CREATE TABLE UTILISATEUR(" & _
+   "login VARCHAR(50)," & _
+   "mot_de_passe VARCHAR(50)," & _
+   "PRIMARY KEY(login)" & _
+");"   
+
+DoCmd.RunSQL "CREATE TABLE CHAMBRE(" & _
+   "num_chamb INT," & _
+   "etage INT," & _
+   "Prix DECIMAL(10,2) NOT NULL," & _
+   "emplacement VARCHAR(50)," & _
+   "Code_categorie INT NOT NULL," & _
+   "PRIMARY KEY(num_chamb)," & _
+   "FOREIGN KEY(Code_categorie) REFERENCES CATEGORIE(Code_categorie)" & _
+");"   
+
+DoCmd.RunSQL "CREATE TABLE RESERVATION(" & _
+   "Num_reservation INT," & _
+   "Date_reservation DATE," & _
+   "date_entrée DATE," & _
+   "date_sortie DATE," & _
+   "cod_client INT NOT NULL," & _
+   "num_chamb INT NOT NULL," & _
+   "PRIMARY KEY(Num_reservation)," & _
+   "FOREIGN KEY(cod_client) REFERENCES CLIENT(cod_client)," & _
+   "FOREIGN KEY(num_chamb) REFERENCES CHAMBRE(num_chamb)" & _
+");"   
+
+DoCmd.RunSQL "CREATE TABLE Consulter(" & _
+   "cod_client INT," & _
+   "num_chamb INT," & _
+   "PRIMARY KEY(cod_client, num_chamb)," & _
+   "FOREIGN KEY(cod_client) REFERENCES CLIENT(cod_client)," & _
+   "FOREIGN KEY(num_chamb) REFERENCES CHAMBRE(num_chamb)" & _
+");"   
+
+End Sub
