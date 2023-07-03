@@ -61,6 +61,26 @@ CREATE TABLE `client` (
   `adresse_Client` varchar(50) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
 
+--Ajouter des clients --
+INSERT INTO client (Code_Client , prenom_Client , tele_Client , nationalité ,	num_Passe , adresse_Client)
+Values 
+( 1,"John",1234567890,"France","AB1C234D","123 Main Street"),
+(2,"Sophia",9876543210,"Germany","EF5G678H","456 Elm Street"),
+(3,"Michael",5678901234,"Brazil","IJ9K012L","789 Oak Street"),
+(4,"Emily",1029384756,"China","MN3P456Q","321 Pine Street"),
+(5,"Daniel",9876543210,"India","RS7T890U","987 Maple Avenue"),
+(6,"Jane",3456789012,"Mexico","VW4X567Y","123 Main Street"),
+(7,"Olivia",6789012345,"Canada","ZA1B234C","456 Elm Street"),
+(8,"Matthew",9012345678,"USA","DE5F678G","789 Oak Street"),
+(9,"Emma",5432109876,"Australia","HI9J012K","321 Pine Street"),
+(10,"Sophia",7654321098,"Germany","LM3N456P","987 Maple Avenue"),
+(11,"John",2345678901,"Canada","QR7S890T","123 Main Street"),
+(12,"David",6789012345,"USA","UV4W567X","456 Elm Street"),
+(13,"Emily",0987654321,"Japan","YZ1A234B","789 Oak Street"),
+(14,"Michael",5432109876,"China","BC2D345E","321 Pine Street"),
+(15,"Emma",2109876543,"France","FG3H456I","987 Maple Avenue");
+
+
 -- --------------------------------------------------------
 
 --
@@ -98,6 +118,26 @@ CREATE TABLE `utilisateur` (
   `mot_De_Passe` varchar(50) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
 
+
+
+--Ajouter des utlisateurs-- 
+INSERT INTO utilisateur(Login	, mot_De_Passe) 
+VALUES
+(1, "jfqdwecx", "X%9u4Lx!7g"),
+(2, "klpagtbh", "1mPZ@3QwJf"),
+(3, "vykrzspn", "G@5B6g0$Hz"),
+(4, "ujfsbnem", "9vK&Ls!z2r"),
+(5, "wslmojxq", "R@4Q1g#9Ve"),
+(6, "pnhgkjmr", "7b$M2!Jz4V"),
+(7, "itzqlxow", "L3@u&8zGwP"),
+(8, "rmjyfkdt", "$a5!E1T2Ql"),
+(9, "ebxvcfog", "T!w0N$fu7Y"),
+(10, "sacpylre", "2N@!kQfz3v"),
+(11, "dzxyrcwi", "6$7J4qFnXp"),
+(12, "qmojsnua", "Xs!K0dG2zF"),
+(13, "ftdjvgan", "4T#1jx!vAy"),
+(14, "hpdmzyli", "Yz$Vq6L1Ns"),
+(15, "gnwaequr", "U0%Ql2n#sj");
 --
 -- Index pour les tables déchargées
 --
