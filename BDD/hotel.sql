@@ -32,6 +32,12 @@ CREATE TABLE `categorie` (
   `désignation` varchar(50) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
 
+INSERT INTO `categorie` (`Code_Categorie`, `désignation`)
+VALUES
+    (1, 'Suite'),
+    (2, 'Chambre Double'),
+    (3, 'Chambre Simple');
+
 -- --------------------------------------------------------
 
 --
@@ -62,7 +68,7 @@ VALUES
     (41, 3, 105.00, 'Vue sur la ville', 1),
     (42, 4, 115.00, 'Vue panoramique', 1),
     (43, 1, 95.00, 'Vue sur le jardin', 2),
-    (44, 2, 120.00, 'Vue sur la mer', 1),
+    (44, 2, 120.00, 'Vue sur la mer', 1),""
     (45, 3, 80.00, 'Vue sur la piscine', 2),
     (46, 4, 110.00, 'Vue panoramique', 1),
     (47, 1, 70.00, 'Vue sur la ville', 2),
@@ -95,11 +101,7 @@ CREATE TABLE `client` (
   `adresse_Client` varchar(50) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
 
-INSERT INTO `categorie` (`Code_Categorie`, `désignation`)
-VALUES
-    (1, 'Suite'),
-    (2, 'Chambre Double'),
-    (3, 'Chambre Simple');
+
 
 --Ajouter des clients --
 INSERT INTO client (Code_Client , prenom_Client , tele_Client , nationalité ,	num_Passe , adresse_Client)
