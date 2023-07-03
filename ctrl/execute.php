@@ -3,6 +3,15 @@
 
 session_start();
 
+include "../modele/DBManager.class.php";
+
+$db = new DBManager();
+
+$id = $_POST['id'];
+$mdp = $_POST['mdp'];
+
+$db->connexionUtilisateur();
+
 // include "../M/DBManager.class.php";
 
 // $client = new DBManager();
@@ -17,30 +26,5 @@ session_start();
 // //print_r($db->selectListeEmploye());
 
 
-if (isset($_POST['submit'])) 
-{ 
-    $id = $_POST ['id'];
-    $mdp = $_POST ['mdp'];
 
-    $db = new PDO ('mysql:host=localhost;dbname=hotel;charset=utf8mb4', 'root', '');
-
-    $sql = "SELECT * FROM utilisateur where Login = '$id' ";
-    $result = $db->prepare($sql);
-    $result->execute();
-
-    if ($result->rowCount() > 0)
-
-    {
-        $data = $result->fetchAll();
-        if (password_verify($mdp, $data["mot_De_Passe"]))
-        {
-            echo "Connexion effectuée, bien ouej Leïla !";
-            $_SESSION["Login"] = $id;
-        }
-        else {
-            
-        }
-    }
-
-}
 ?>

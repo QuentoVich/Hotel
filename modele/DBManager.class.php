@@ -10,22 +10,38 @@
         }
 
         //Methode qui renvoie la liste des employés
-	    public function selectListeEmploye() : array
+	    public function connexionUtilisateur() : void
         {
-            $stmt= $this->bdd->prepare("SELECT * FROM `client`; ");
-            $stmt->execute();
-            $listEmploi = $stmt->fetchAll();
-            return $listEmploi;
+           
+            if (isset($_POST['submit'])) 
+            { 
+            $id = $_POST ['id'];
+            $mdp = $_POST ['mdp'];
+
+            $db = new PDO ('mysql:host=localhost;dbname=hotel;charset=utf8mb4', 'root', '');
+
+            $sql = "SELECT * FROM utilisateur where Login = '$id' ";
+            $result = $db->prepare($sql);
+            $result->execute();
+
+            if ($result->rowCount() > 0)
+
+         {
+            $data = $result->fetchAll();
+            // if (password_verify($mdp, $data["mot_De_Passe"]))
+            // {
+            echo "Connexion effectuée, bien ouej Leïla !";
+            $_SESSION["Login"] = $id;
+            }
+        // else {
+
+        // }
+    
+}
         }
 
    
-        //methode qui ajoute une personne
-        public function insertEmploye($name, $surname, $sex) : void {       
-            $sql = "INSERT INTO test (name, surname, sex) VALUES (?,?,?)";
-            $stmt= $this->bdd->prepare($sql);
-            $stmt->execute([$name, $surname, $sex]);
-        
-        }
+  
 
         // //methode qui supprime un employe par son noemp
         // public function supprEmploye($noemp) : void {
