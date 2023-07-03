@@ -22,12 +22,12 @@
 
    
         //methode qui ajoute une reservation
-        public function setReservation($date, $surname, $tel) : void { 
+        public function setReservation($date_Reservation , $date_Entrée, $date_Sortie , $Code_CLient , $Num_Chamb) : void { 
             $this->num_Reservation = self::$count_reservation++;   
 
             $sql = "INSERT INTO reservation (Num_Reservation , date_Reservation, date_Entrée , date_Sortie , Code_CLient , Num_Chamb) VALUES (?,?,?)";
             $stmt= $this->bdd->prepare($sql);
-            $stmt->execute([$date, $surname, $tel]);
+            $stmt->execute([$date_Reservation , $date_Entrée, $date_Sortie , $Code_CLient , $Num_Chamb]);
         }
 
 
