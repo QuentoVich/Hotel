@@ -8,7 +8,7 @@
         //constructeur qui initialise la connxion à la BDD
         public function __construct()
         {
-           $this->bdd = new PDO('mysql:host=localhost;dbname=hotel;charset=utf8_bin', 'root', '');
+           $this->bdd = new PDO('mysql:host=localhost;dbname=hotel;charset=utf8mb4', 'root', '');
         }
 
         //Methode qui renvoie la liste des employés
