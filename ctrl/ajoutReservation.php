@@ -26,4 +26,4 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
 }
 
-$db -> setReservation($date_Reservation , $date_Entree , $date_Sortie , $Code_Client , $Num_Chamb);
+
