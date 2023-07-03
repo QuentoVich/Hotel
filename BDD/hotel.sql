@@ -46,6 +46,40 @@ CREATE TABLE `chambre` (
   `Code_Categorie` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
 
+
+INSERT INTO `chambre` (`Num_Chamb`, `etage`, `prix`, `emplacement`, `Code_Categorie`)
+VALUES
+    (31, 1, 100.00, 'Vue sur la mer', 1),
+    (32, 1, 80.00, 'Vue sur la piscine', 2),
+    (33, 2, 90.00, 'Vue sur le jardin', 2),
+    (34, 2, 120.00, 'Vue panoramique', 1),
+    (35, 3, 70.00, 'Vue sur la ville', 2),
+    (36, 3, 110.00, 'Vue sur la mer', 1),
+    (37, 4, 130.00, 'Vue panoramique', 1),
+    (38, 4, 95.00, 'Vue sur le jardin', 2),
+    (39, 1, 85.00, 'Vue sur la piscine', 2),
+    (40, 2, 75.00, 'Vue sur la mer', 2),
+    (41, 3, 105.00, 'Vue sur la ville', 1),
+    (42, 4, 115.00, 'Vue panoramique', 1),
+    (43, 1, 95.00, 'Vue sur le jardin', 2),
+    (44, 2, 120.00, 'Vue sur la mer', 1),
+    (45, 3, 80.00, 'Vue sur la piscine', 2),
+    (46, 4, 110.00, 'Vue panoramique', 1),
+    (47, 1, 70.00, 'Vue sur la ville', 2),
+    (48, 2, 90.00, 'Vue sur la mer', 2),
+    (49, 3, 100.00, 'Vue sur le jardin', 1),
+    (50, 4, 125.00, 'Vue panoramique', 1),
+    (51, 1, 105.00, 'Vue sur la piscine', 2),
+    (52, 2, 85.00, 'Vue sur la mer', 1),
+    (53, 3, 115.00, 'Vue sur la ville', 1),
+    (54, 4, 75.00, 'Vue panoramique', 2),
+    (55, 1, 120.00, 'Vue sur le jardin', 1),
+    (56, 2, 70.00, 'Vue sur la mer', 2),
+    (57, 3, 90.00, 'Vue sur la piscine', 2),
+    (58, 4, 100.00, 'Vue panoramique', 1),
+    (59, 1, 110.00, 'Vue sur la ville', 1),
+    (60, 2, 95.00, 'Vue sur le jardin', 2);
+
 -- --------------------------------------------------------
 
 --
@@ -60,6 +94,12 @@ CREATE TABLE `client` (
   `num_Passe` int(11) DEFAULT NULL,
   `adresse_Client` varchar(50) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
+
+INSERT INTO `categorie` (`Code_Categorie`, `désignation`)
+VALUES
+    (1, 'Suite'),
+    (2, 'Chambre Double'),
+    (3, 'Chambre Simple');
 
 --Ajouter des clients --
 INSERT INTO client (Code_Client , prenom_Client , tele_Client , nationalité ,	num_Passe , adresse_Client)
