@@ -2,34 +2,35 @@
 
 	class DBManager
     {   private $bdd;
-        private static $count_reservation;
-        private $num_Reservation;
+        private static $count_reservation = 1;
+       
 
         //constructeur qui initialise la connxion à la BDD
         public function __construct()
         {
-           $this->bdd = new PDO('mysql:host=localhost;dbname=hotel;charset=utf8mb4', 'root', '');
+            $this->bdd = new PDO('mysql:host=localhost; dbname=hotel; charset=utf8', 'root', '');
+
         }
 
         //Methode qui renvoie la liste des employés
-	    public function selectListeEmploye() : array
-        {
-            $stmt= $this->bdd->prepare("SELECT * FROM `client`; ");
-            $stmt->execute();
-            $listEmploi = $stmt->fetchAll();
-            return $listEmploi;
-        }
+	    // public function selectListeEmploye() : array
+        // {
+        //     $stmt= $this->bdd->prepare("SELECT * FROM `client`; ");
+        //     $stmt->execute();
+        //     $listEmploi = $stmt->fetchAll();
+        //     return $listEmploi;
+        // }
 
    
         //methode qui ajoute une reservation
-        public function setReservation($date_Reservation , $date_Entrée, $date_Sortie , $Code_CLient , $Num_Chamb) : void { 
-            $this->num_Reservation = self::$count_reservation++;   
+      
+        public function setReservation($date_Reservation, $date_Entrée, $date_Sortie, $Code_Client, $Num_Chamb): void {
+            $num_Reservation = self::$count_reservation++;
 
-            $sql = "INSERT INTO reservation (Num_Reservation , date_Reservation, date_Entrée , date_Sortie , Code_CLient , Num_Chamb) VALUES (?,?,?)";
-            $stmt= $this->bdd->prepare($sql);
-            $stmt->execute([$date_Reservation , $date_Entrée, $date_Sortie , $Code_CLient , $Num_Chamb]);
+            $sql = "INSERT INTO reservation (num_Reservation , date_Reservation, date_Entrée, date_Sortie, Code_Client, Num_Chamb) VALUES (?, ?, ?, ?, ?)";
+            $stmt = $this->bdd->prepare($sql);
+            $stmt->execute([$num_Reservation, $date_Reservation, $date_Entrée, $date_Sortie, $Code_Client, $Num_Chamb]);
         }
-
 
 
 
@@ -65,25 +66,7 @@
                 return $this;
         }
 
-        /**
-         * Get the value of num_Reservation
-         */ 
-        public function getNum_Reservation()
-        {
-                return $this->num_Reservation;
-        }
-
-        /**
-         * Set the value of num_Reservation
-         *
-         * @return  self
-         */ 
-        public function setNum_Reservation($num_Reservation)
-        {
-                $this->num_Reservation = $num_Reservation;
-
-                return $this;
-        }
+     
     }
 
 

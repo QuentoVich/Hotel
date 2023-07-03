@@ -90,21 +90,21 @@ VALUES
 
 --
 -- Structure de la table `client`
---
+---- Ajouter des clients --
 
 CREATE TABLE `client` (
   `Code_Client` int(11) NOT NULL,
   `prenom_Client` varchar(50) DEFAULT NULL,
-  `tele_Client` smallint(6) DEFAULT NULL,
+  `tele_Client` int(11) DEFAULT NULL,
   `nationalité` varchar(50) DEFAULT NULL,
-  `num_Passe` int(11) DEFAULT NULL,
+  `num_Passe` varchar(8) DEFAULT NULL,
   `adresse_Client` varchar(50) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
 
 
 
---Ajouter des clients --
-INSERT INTO client (Code_Client , prenom_Client , tele_Client , nationalité ,	num_Passe , adresse_Client)
+
+INSERT INTO `client` (Code_Client , prenom_Client , tele_Client , nationalité ,	num_Passe , adresse_Client)
 Values 
 ( 1,"John",1234567890,"France","AB1C234D","123 Main Street"),
 (2,"Sophia",9876543210,"Germany","EF5G678H","456 Elm Street"),
@@ -153,7 +153,7 @@ CREATE TABLE `reservation` (
 
 --
 -- Structure de la table `utilisateur`
---
+----Ajouter des utlisateurs-- 
 
 CREATE TABLE `utilisateur` (
   `Login` varchar(50) NOT NULL,
@@ -162,24 +162,24 @@ CREATE TABLE `utilisateur` (
 
 
 
---Ajouter des utlisateurs-- 
+
 INSERT INTO utilisateur(Login	, mot_De_Passe) 
 VALUES
-(1, "jfqdwecx", "X%9u4Lx!7g"),
-(2, "klpagtbh", "1mPZ@3QwJf"),
-(3, "vykrzspn", "G@5B6g0$Hz"),
-(4, "ujfsbnem", "9vK&Ls!z2r"),
-(5, "wslmojxq", "R@4Q1g#9Ve"),
-(6, "pnhgkjmr", "7b$M2!Jz4V"),
-(7, "itzqlxow", "L3@u&8zGwP"),
-(8, "rmjyfkdt", "$a5!E1T2Ql"),
-(9, "ebxvcfog", "T!w0N$fu7Y"),
-(10, "sacpylre", "2N@!kQfz3v"),
-(11, "dzxyrcwi", "6$7J4qFnXp"),
-(12, "qmojsnua", "Xs!K0dG2zF"),
-(13, "ftdjvgan", "4T#1jx!vAy"),
-(14, "hpdmzyli", "Yz$Vq6L1Ns"),
-(15, "gnwaequr", "U0%Ql2n#sj");
+("jfqdwecx", "X%9u4Lx!7g"),
+("klpagtbh", "1mPZ@3QwJf"),
+("vykrzspn", "G@5B6g0$Hz"),
+("ujfsbnem", "9vK&Ls!z2r"),
+("wslmojxq", "R@4Q1g#9Ve"),
+("pnhgkjmr", "7b$M2!Jz4V"),
+("itzqlxow", "L3@u&8zGwP"),
+("rmjyfkdt", "$a5!E1T2Ql"),
+("ebxvcfog", "T!w0N$fu7Y"),
+("sacpylre", "2N@!kQfz3v"),
+("dzxyrcwi", "6$7J4qFnXp"),
+("qmojsnua", "Xs!K0dG2zF"),
+("ftdjvgan", "4T#1jx!vAy"),
+("hpdmzyli", "Yz$Vq6L1Ns"),
+("gnwaequr", "U0%Ql2n#sj");
 --
 -- Index pour les tables déchargées
 --
