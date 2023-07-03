@@ -16,7 +16,7 @@
             </div>
             <div class="">
                 <label for="mdp">Mot de passe : </label>
-                <input id="mdp" name="mdp" type="text" placeholder = "Entrez votre mot de passe"/>
+                <input id="mdp" name="mdp" type="password" placeholder = "Entrez votre mot de passe"/>
             </div>
             <input type="submit" id="submit" name="submit" value="Envoyer" />
         </form>
