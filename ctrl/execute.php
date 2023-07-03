@@ -29,12 +29,16 @@ if (isset($_POST['submit']))
     $result->execute();
 
     if ($result->rowCount() > 0)
+
     {
         $data = $result->fetchAll();
-        if (password_verify($mdp, $data[$i], ["mot_De_Passe"]))
+        if (password_verify($mdp, $data["mot_De_Passe"]))
         {
             echo "Connexion effectuée, bien ouej Leïla !";
             $_SESSION["Login"] = $id;
+        }
+        else {
+            
         }
     }
 
