@@ -8,7 +8,7 @@
     <body>
         <form class="form" action="../ctrl/ajoutReservation.php" method="post" >
 
-    <h1>RESERVATION</h1>
+    <h1>MA RESERVATION</h1>
     <div>
         <label for="chambre">Chambre :</label>
         <input type="text" name="chambre" id="chambre" required>

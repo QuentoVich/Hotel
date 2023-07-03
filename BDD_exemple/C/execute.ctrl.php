@@ -10,5 +10,5 @@ $sex = $_POST['sex'];
 
 $db->insertEmploye($nom, $prenom, $sex);
 
-//print_r($db->selectListeEmploye());
+print_r($db->selectListeEmploye());
 ?>

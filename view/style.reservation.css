@@ -15,6 +15,7 @@ form {
     text-align: center;
     border-radius: 2REM;
     background-color: coral;
+    background-image: url('./items/fond.jpg');
 }
 
 
@@ -35,8 +36,12 @@ border-style: none;
 
 
 body{
-    background-color: blueviolet;
+    background-image: url('./items/fond.jpg');
     background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+
 }
 
 input#submit{

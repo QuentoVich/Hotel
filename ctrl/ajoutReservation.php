@@ -23,4 +23,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     // Afficher le numéro de réservation
     echo "Numéro de réservation : " . $num_Reservation;
+
 }
+
+$db -> setReservation($date_Reservation , $date_Entree , $date_Sortie , $Code_Client , $Num_Chamb);
