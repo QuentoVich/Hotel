@@ -10,12 +10,13 @@
 
         <h1>RESERVATION</h1>
             <div class="">
-                <label for="date_Reservation">Date réservation : </label>
-                <input id="date_Reservation" name="date_Reservation" type="date" />
+                <label for="date_debut">Date de début :</label>
+                <input type="date" id="date_debut" name="date_debut">
             </div>
+
             <div class="">
-                <label for="nom">Nom : </label>
-                <input id="nom" name="nom" type="text" />
+                <label for="date_fin">Date de fin :</label>
+                <input type="date" id="date_fin" name="date_fin">
             </div>
 
             <div class="">

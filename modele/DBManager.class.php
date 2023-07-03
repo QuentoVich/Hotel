@@ -25,11 +25,14 @@
         public function setReservation($date, $surname, $tel) : void { 
             $this->num_Reservation = self::$count_reservation++;   
 
-            $sql = "INSERT INTO reservation (date_Reservation, nom, sex) VALUES (?,?,?)";
+            $sql = "INSERT INTO reservation (Num_Reservation , date_Reservation, date_Entrée , date_Sortie , Code_CLient , Num_Chamb) VALUES (?,?,?)";
             $stmt= $this->bdd->prepare($sql);
             $stmt->execute([$date, $surname, $tel]);
-        
         }
+
+
+
+
 
         // //methode qui supprime un employe par son noemp
         // public function supprEmploye($noemp) : void {
