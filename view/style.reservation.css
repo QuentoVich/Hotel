@@ -1,14 +1,47 @@
-div {
-    display: block;
-    margin: 1rem;
+*{
+    padding : 0px;
+    margin : 0px;
+
 }
+
 form {
-    width: 400px;
-    margin: 100px auto;
-    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     box-shadow: 1px 1px 12px 3px #CCC;
+    width: 400px;
+    padding: 2rem;
+    margin: 25%;
+    text-align: center;
+    border-radius: 2REM;
+    background-color: coral;
 }
-form label {
-    display: inline-block;
-    width: 100px;
+
+
+div{
+    display : flex;
+    flex-direction: column;
+    margin : 2%;
 }
+
+
+div input{
+border-radius: 2REM;
+height : 1REM;
+padding: 1rem;
+border-style: none;
+}
+
+
+body{
+    background-color: blueviolet;
+    background-attachment: fixed;
+}
+
+input#submit{
+    border-radius: 1rem;
+    height : 1REM;
+    padding: 1rem;
+    text-align: center;
+}
+
