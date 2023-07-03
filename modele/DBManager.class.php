@@ -20,7 +20,7 @@
 
    
         //methode qui ajoute une personne
-        public function insertEmploye($name, $surname, $sex) : void {       
+        public function setReservation($name, $surname, $sex) : void {       
             $sql = "INSERT INTO test (name, surname, sex) VALUES (?,?,?)";
             $stmt= $this->bdd->prepare($sql);
             $stmt->execute([$name, $surname, $sex]);
