@@ -24,4 +24,10 @@
         } catch (PDOException $e) {
             echo "Erreur : " . $e->getMessage();
         }
+
+
+        // Ligne pour recuperer le numero de chambre et le prix dans le formulaire de reservation avec un bouton reserver : 
+
+        /* <a href="reservation.php?chambre=<?php echo $numero_chambre; ?>&prix=<?php echo $prix_chambre; ?>">Réserver</a>*/
+
         ?>
