@@ -12,7 +12,7 @@ $Num_Chamb = $_POST['chambre'];
 $db->setReservation($date_Reservation, $date_Entree, $date_Sortie, $Code_Client, $Num_Chamb);
 // print_r($db->setReservation());
 
-
+// Supposons que vous avez déjà instancié votre modèle dans une variable $modele
 
 
 
