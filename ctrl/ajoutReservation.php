@@ -16,7 +16,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $Num_Chamb = $_POST['id_chambre'];
 
     // Obtenir le prochain numéro de réservation
-    $num_Reservation = $modele->getNextReservationNumber();
+    // $num_Reservation = $modele->getNextReservationNumber();
 
     // Effectuer une réservation avec le numéro de réservation
     $modele->setReservation($num_Reservation, $date_Reservation, $date_Entree, $date_Sortie, $Code_Client, $Num_Chamb);

@@ -18,7 +18,7 @@
             <DIV id="corps_form">
 
                 <div>
-                    <label for="chambre">Chambre :</label>
+                    <label for="id_chambre">Chambre :</label>
                     <input type="text" name="chambre" id="chambre" required>
                 </div>
 
@@ -30,7 +30,7 @@
                 <div>
                     <!-- readonly -->
                     <label for="prix">Prix :</label>
-                    <input type="text" name="prix" id="prix" required>
+                    <input type="text" name="prix" id="prix" readonly>
                 </div>
 
                 <div>

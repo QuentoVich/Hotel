@@ -27,7 +27,7 @@
         public function setReservation($date_Reservation, $date_Entrée, $date_Sortie, $Code_Client, $Num_Chamb): void {
             $num_Reservation = self::$count_reservation++;
 
-            $sql = "INSERT INTO reservation (num_Reservation , date_Reservation, date_Entrée, date_Sortie, Code_Client, Num_Chamb) VALUES (?, ?, ?, ?, ?)";
+            $sql = "INSERT INTO reservation (num_Reservation , date_Reservation, date_Entrée, date_Sortie, Code_Client, Num_Chamb) VALUES (?, ?, ?, ?, ?, ?)";
             $stmt = $this->bdd->prepare($sql);
             $stmt->execute([$num_Reservation, $date_Reservation, $date_Entrée, $date_Sortie, $Code_Client, $Num_Chamb]);
         }
