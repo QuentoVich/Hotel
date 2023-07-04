@@ -49,21 +49,19 @@ class DBManager
 
         {
             $db = $result->fetchAll();
+            $mdp = hash('sha256', $mdp);
 
         if ($mdp === $mdp) 
         {
             header('Location:../view/recherche.php');
             $_SESSION["Login"] = $id;
 
-        } else 
-        {
-            header('Location:../view/connexion.php');
-        }
-        }
+        } else header('Location:../view/connexion.php?login_err=mdp');
+        } else header('Location:../view/connexion.php?login_err=id');
+        } else header('Location:../view/connexion.php?login_err=already');
+    }
 
-        
-    }
-    }
+
     public function getAvailableRooms($categorie, $dateEntree, $dateSortie)
     {
         // Requête pour récupérer les chambres disponibles
@@ -93,41 +91,5 @@ class DBManager
 
         return $result;
     }
-
-
-
-
-
-    // //methode qui supprime un employe par son noemp
-    // public function supprEmploye($noemp) : void {
-
-    // }
-
-    // //methode qui mets à jour le salaire d'un amployé
-    // public function updateSalaireEmploye($noemp, $sal) : void {
-
-    // }
-
-
-    /**
-     * Get the value of count_reservation
-     */
-    // public function getCount_reservation()
-    // {
-    //         return $this->count_reservation;
-    // }
-
-    // /**
-    //  * Set the value of count_reservation
-    //  *
-    //  * @return  self
-    //  */ 
-    // public function setCount_reservation($count_reservation)
-    // {
-    //         $this->count_reservation = $count_reservation;
-
-    //         return $this;
-    // }
-
 
 }
