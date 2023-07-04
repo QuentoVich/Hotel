@@ -56,7 +56,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $date_Sortie = $_POST['date_fin'];
     $Code_Client = $_POST['nom'];
     $Num_Chamb = $_POST['id_chambre'];
-
+    
+    $db = new PDO ('mysql:host=localhost;dbname=hotel;charset=utf8mb4', 'root', '');
     // Obtenir le prochain numéro de réservation
     $num_Reservation = $modele->getNextReservationNumber();
 
