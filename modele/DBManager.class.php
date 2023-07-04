@@ -8,28 +8,40 @@
         //constructeur qui initialise la connxion à la BDD
         public function __construct()
         {
-            $this->bdd = new PDO('mysql:host=localhost; dbname=hotel; charset=utf8', 'root', '');
+            $this->bdd = new PDO('mysql:host=localhost;dbname=hotel;charset=utf8', 'root', '');
+
 
         }
 
-        //Methode qui renvoie la liste des employés
-	    // public function selectListeEmploye() : array
-        // {
-        //     $stmt= $this->bdd->prepare("SELECT * FROM `client`; ");
-        //     $stmt->execute();
-        //     $listEmploi = $stmt->fetchAll();
-        //     return $listEmploi;
-        // }
+        public function getMaxReservationNumber()
+    {
+        $sql = "SELECT MAX(Num_Reservation) FROM reservation";
+        $stmt = $this->bdd->prepare($sql);
+        $stmt->execute();
+        $result = $stmt->fetchColumn();
 
+        if ($result === false) {
+            return 1; // Si aucune réservation n'existe, on commence à 1
+        }
+
+        return $result + 1;
+    }
    
         //methode qui ajoute une reservation
       
-        public function setReservation($date_Reservation, $date_Entrée, $date_Sortie, $Code_Client, $Num_Chamb): void {
+        public function setReservation( $date_Reservation, $date_Entree, $date_Sortie, $Code_Client, $Num_Chamb): void { 
+            
             $num_Reservation = self::$count_reservation++;
 
-            $sql = "INSERT INTO reservation (num_Reservation , date_Reservation, date_Entrée, date_Sortie, Code_Client, Num_Chamb) VALUES (?, ?, ?, ?, ?)";
+                // Afficher le numéro de réservation
+                echo "Reservation faites avec succès \n Numéro de réservation : " . $num_Reservation;
+            
+            $sql = "INSERT INTO reservation (num_Reservation , date_Reservation, date_Entrée, date_Sortie, Code_Client, Num_Chamb) 
+            VALUES (?, ?, ?, ?, ?, ?)";
             $stmt = $this->bdd->prepare($sql);
-            $stmt->execute([$num_Reservation, $date_Reservation, $date_Entrée, $date_Sortie, $Code_Client, $Num_Chamb]);
+            $stmt->execute([$num_Reservation, $date_Reservation, $date_Entree, $date_Sortie, $Code_Client, $Num_Chamb]);
+
+           
         }
 
 

@@ -44,15 +44,16 @@
                 </div>
 
                 <div>
+                    <label for="Code_Client">Code  client :</label>
+                    <input type="int" name="Code_Client" id="Code_Client" required>
+                </div>
+
+                <div>
                     <label for="nom">Nom :</label>
                     <input type="text" name="nom" id="nom" required>
                 </div>
 
-                <div>
-                    <label for="telephone">Téléphone :</label>
-                    <input type="text" name="telephone" id="telephone" required>
-                </div>
-
+        
                 <input type="hidden" name="id_chambre" value="<?php echo $id_chambre; ?>">
 
                 <input type="submit" id="submit" name="submit" value="Reserver">
