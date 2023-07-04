@@ -59,9 +59,39 @@ class DBManager
 
         }
         }
+
+        
     }
 
+    public function getAvailableRooms($categorie, $dateEntree, $dateSortie)
+    {
+        // Requête pour récupérer les chambres disponibles
+        $sql = "SELECT chambre.Num_Chamb, chambre.etage, chambre.prix, chambre.emplacement, categorie.désignation
+                FROM chambre
+                INNER JOIN categorie ON chambre.Code_Categorie = categorie.Code_Categorie
+                WHERE chambre.Code_Categorie = :categorie
+                AND chambre.Num_Chamb NOT IN (
+                    SELECT Num_Chamb FROM reservation
+                    WHERE (date_Entrée BETWEEN :dateEntree AND :dateSortie)
+                    OR (date_Sortie BETWEEN :dateEntree AND :dateSortie)
+                )";
 
+        // Préparer la requête
+        $stmt = $this->bdd->prepare($sql);
+
+        // Bind des paramètres
+        $stmt->bindParam(':categorie', $categorie);
+        $stmt->bindParam(':dateEntree', $dateEntree);
+        $stmt->bindParam(':dateSortie', $dateSortie);
+
+        // Exécuter la requête
+        $stmt->execute();
+
+        // Récupérer les résultats
+        $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+        return $result;
+    }
 
 
 

@@ -11,7 +11,7 @@
     <select name="categorie" id="categorie">
       <option value="">Toutes les catégories</option>
       <option value="1">Suite</option>
-      <option value="2">Cambre Double</option>
+      <option value="2">Chambre Double</option>
       <option value="3">Chambre Simple</option>
     </select>
 
