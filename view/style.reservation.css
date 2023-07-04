@@ -81,11 +81,9 @@ body{
     background-position: center;
     display: flex;
     justify-content: center;
-    align-items: start;
-    
+    align-items: start; 
     margin-top: 0;
 
-  
     font-family: "Caslon Regular";
 
 

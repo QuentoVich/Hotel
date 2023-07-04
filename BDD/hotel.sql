@@ -141,7 +141,7 @@ CREATE TABLE `consulter` (
 --
 
 CREATE TABLE `reservation` (
-  `Num_Reservation` int(11) NOT NULL,
+  `Num_Reservation` int(11) NOT NULL AUTO_INCREMENT,
   `date_Reservation` date DEFAULT NULL,
   `date_Entrée` date DEFAULT NULL,
   `date_Sortie` date DEFAULT NULL,
