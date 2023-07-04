@@ -87,21 +87,6 @@ label{
     font-size: 1.8em;
 }
 
-#titre{
-    color: #ffffff;
-    text-shadow: 0px 0px 40px rgb(214, 212, 212);
-    background-color: #df5723;
-    width: 100%;
-    margin: 0;
-    border-radius: 2rem  2rem  0px  0px;
-    font-family: "Caslon ExtraBold";
-    font-size: 2em;
-    
-}
-#corps_form{
-    padding: 2rem;
-}
-
 
 div{
     display : flex;
@@ -113,7 +98,6 @@ div{
 
 div input{
 border-radius: 2REM;
-height : 1REM;
 padding: 1rem;
 border-style: none;
 text-align: center;
@@ -121,7 +105,7 @@ text-align: center;
 
 
 
-input#submit{
+form input#submit{
     display: flex;
     justify-content: center;
     align-items: center;

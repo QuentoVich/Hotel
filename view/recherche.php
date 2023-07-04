@@ -36,7 +36,7 @@
       </div>
 
       <br><br>
-      <input type="submit" name="submit" value="Afficher les chambres disponibles">
+      <input type="submit" id="submit" name="submit" value="Afficher les chambres disponibles">
     </form>
   </div>
 </body>
