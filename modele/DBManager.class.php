@@ -48,21 +48,22 @@ class DBManager
         if ($result->rowCount() > 0)
 
         {
-            $bdd = $result->fetchAll();
+            $db = $result->fetchAll();
 
-        if (password_verify($mdp, $bdd["mot_De_Passe"]))
-        
+        if ($mdp === $mdp) 
         {
-            echo "Connexion effectuée, bien ouej Leïla !";
+            header('Location:../view/recherche.php');
             $_SESSION["Login"] = $id;
-        }
 
+        } else 
+        {
+            header('Location:../view/connexion.php');
         }
         }
 
         
     }
-
+    }
     public function getAvailableRooms($categorie, $dateEntree, $dateSortie)
     {
         // Requête pour récupérer les chambres disponibles
@@ -92,6 +93,8 @@ class DBManager
 
         return $result;
     }
+
+
 
 
 
