@@ -31,6 +31,35 @@ class DBManager
         echo "Réservation effectuée avec succès !\nNuméro de réservation : " . $num_Reservation;
     }
 
+    public function connexionUtilisateur() : void
+    {
+       
+        if (isset($_POST['submit'])) 
+        { 
+            $id = $_POST ['id'];
+            $mdp = $_POST ['mdp'];
+
+            $db = new PDO ('mysql:host=localhost;dbname=hotel;charset=utf8mb4', 'root', '');
+
+            $sql = "SELECT * FROM utilisateur where Login = '$id' and mot_De_Passe = '$mdp'";
+            $result = $db->prepare($sql);
+            $result->execute();
+
+        if ($result->rowCount() > 0)
+
+        {
+            $bdd = $result->fetchAll();
+
+        if (password_verify($mdp, $bdd["mot_De_Passe"]))
+        
+        {
+            echo "Connexion effectuée, bien ouej Leïla !";
+            $_SESSION["Login"] = $id;
+        }
+
+        }
+        }
+    }
 
 
 
