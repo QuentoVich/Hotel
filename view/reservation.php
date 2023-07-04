@@ -6,10 +6,7 @@
     <title>Votre reservation</title>
     <link href="./style.reservation.css" rel="stylesheet">
 </head>
-<?php
-$chambre = $_GET['chambre'];
-$prix = $_GET['prix'];
-?>
+
 <body>
     <section>
 
@@ -22,7 +19,7 @@ $prix = $_GET['prix'];
 
                 <div>
                     <label for="chambre">Chambre :</label>
-                    <input $chambre required>
+                    <input type="text" name="chambre" id="chambre" required>
                 </div>
 
                 <div>
@@ -33,7 +30,7 @@ $prix = $_GET['prix'];
                 <div>
                     <!-- readonly -->
                     <label for="prix">Prix :</label>
-                    <input $prix required>
+                    <input type="text" name="prix" id="prix" required>
                 </div>
 
                 <div>
