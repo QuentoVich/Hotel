@@ -6,7 +6,7 @@
 <body>
   <h1>Chambres disponibles</h1>
 
-  <form action="./consultation.php" method="post">
+  <form action="../ctrl/listChambres.php" method="post">
     <label for="categorie">Catégorie :</label>
     <select name="categorie" id="categorie">
       <option value="">Toutes les catégories</option>
