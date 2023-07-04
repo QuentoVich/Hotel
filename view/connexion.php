@@ -20,7 +20,7 @@
         </div>
         <div class="element">
             <label for="mdp">Mot de passe : </label>
-            <input id="mdp" name="mdp" type="password" placeholder="Entrez votre mot de passe" />
+            <input id="mdp" name="mdp" type="password" placeholder="Entrez votre mot de passe" reqired= />
         </div>
         <input type="submit" id="submit" name="submit" value="Envoyer" />
         </DIV>
