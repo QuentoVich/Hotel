@@ -3,27 +3,41 @@
 	class DBManager
     {   private $bdd;
 
-        //constructeur qui initialise la connxion à la BDD
+        //constructeur qui initialise la connexion à la BDD
         public function __construct()
         {
-           $this->bdd = new PDO('mysql:host=localhost;dbname=test;charset=utf8mb4', 'root', '');
+           $this->bdd = new PDO('mysql:host=localhost;dbname=hotel;charset=utf8bin', 'root', '');
         }
 
-        //Methode qui renvoie la liste des employés
+        //Methode qui renvoie la liste des utilisateurs
 	    public function selectListeEmploye() : array
         {
-            $stmt= $this->bdd->prepare("SELECT * FROM `test`; ");
+            $stmt= $this->bdd->prepare("SELECT * FROM `utilisateur`; ");
             $stmt->execute();
-            $listEmploi = $stmt->fetchAll();
-            return $listEmploi;
+            $listUtilisateur = $stmt->fetchAll();
+
         }
 
    
-        //methode qui ajoute une personne
-        public function insertEmploye($name, $surname, $sex) : void {       
-            $sql = "INSERT INTO test (name, surname, sex) VALUES (?,?,?)";
-            $stmt= $this->bdd->prepare($sql);
-            $stmt->execute([$name, $surname, $sex]);
+        //methode qui vérifie le login et mot de passe existe
+        public function verifUtilisateur($id, $mdp) : void {   
+
+        {
+            $stmt= $this->bdd->prepare("SELECT * FROM `utilisateur`; ");
+            $stmt->execute();
+            $listUtilisateur = $stmt->fetchAll();
+    
+        }
+            
+        if ( !isset($_POST['id'], $_POST['mdp']) ) {
+        // Could not get the data that should have been sent.
+        exit('Please fill both the username and password fields!');
+        }
+
+         if ($_POST['Login'] === $id) {
+            $sql = SELECT * FROM `utilisateur`
+            # code...
+         }
         
         }
 
