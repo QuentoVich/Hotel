@@ -50,16 +50,24 @@ class DBManager
         {
             $db = $result->fetchAll();
             $mdp = hash('sha256', $mdp);
+            $errors = [];
 
         if ($mdp === $mdp) 
         {
             header('Location:../view/recherche.php');
             $_SESSION["Login"] = $id;
 
-        } else header('Location:../view/connexion.php?login_err=mdp');
-        } else header('Location:../view/connexion.php?login_err=id');
-        } else header('Location:../view/connexion.php?login_err=already');
+        } 
+         if ($id !== $id) {
+            $errors ['message'] = "Vos identifiants sont incorrects, veuilez vérifier votre saisie.";
+            header('Location:../view/connexion.php?login_err=mdp') ;
+         }
+
+        } else $errors ['message'] = "Vos identifiants sont incorrects, veuilez vérifier votre saisie.";
+        header('Location:../view/connexion.php?login_err=id') ;
+        } else header('Location:../view/connexion.php?login_err=already') ;
     }
+
 
 
     public function getAvailableRooms($categorie, $dateEntree, $dateSortie)
