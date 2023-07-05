@@ -1,3 +1,5 @@
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -41,7 +43,15 @@
 </header>
 <body>
   <DIV class="titre">
-    <h1>Que souhaitez-vous ? </h1>
+    <h1> <?php
+
+session_start();
+
+$bienvenue = "Bonjour et bienvenue " . $_SESSION['Login'] . " dans notre site !";
+
+echo $bienvenue;
+
+?> <br><br>Que souhaitez-vous ? </h1>
   </DIV>
 
 
@@ -72,6 +82,12 @@
       <input type="submit" id="submit" name="submit" value="Afficher les chambres disponibles ">
     </form>
   </div>
+  
+  <div id="deconnexion">
+    <form action="connexion.php" method ="post">
+      <input type="submit" name="submit" value="Se déconnecter">
+      <?php session_destroy(); ?>
+    </form>
+  </div>
 </body>
-
 </html>
