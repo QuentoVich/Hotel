@@ -1,34 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <title>Chambres disponibles</title>
+    <link href="./style.chambre.css" rel="stylesheet">
 </head>
+
 <body>
     <h1>Chambres disponibles</h1>
 
+    <?php
+    $availableRooms = [];
+    if (isset($_GET['rooms'])) {
+        $availableRooms = unserialize(urldecode($_GET['rooms']));
+    }
+    ?>
+
     <?php if (!empty($availableRooms)) : ?>
-        <table>
-            <tr>
-                <th>Numéro de chambre</th>
-                <th>Étage</th>
-                <th>Prix</th>
-                <th>Emplacement</th>
-                <th>Catégorie</th>
-                <th>Actions</th>
-            </tr>
+        <section class="chambres">
+          
             <?php foreach ($availableRooms as $room) : ?>
-                <tr>
-                    <td><?php echo $room['Num_Chamb']; ?></td>
-                    <td><?php echo $room['etage']; ?></td>
-                    <td><?php echo $room['prix']; ?></td>
-                    <td><?php echo $room['emplacement']; ?></td>
-                    <td><?php echo $room['désignation']; ?></td>
-                    <td><a href="../view/reservation.php?chambre=<?php echo $room['Num_Chamb']; ?>&prix=<?php echo $room['prix']; ?>">Réserver</a></td>
-                </tr>
+                <section class = "carte_chambre">
+                    <div>
+                        <h3>Numéro de chambre</h3>
+                        <?php echo $room['Num_Chamb']; ?>
+                    </div>
+                    <div>
+                        <h3>Étage</h3>
+                        <?php echo $room['etage']; ?>
+                    </div>
+                    <div>
+                        <h3>Prix</h3>
+                        <?php echo $room['prix']; ?>
+                    </div>
+                    <div>
+                        <h3>Emplacement</h3>
+                        <?php echo $room['emplacement']; ?>
+                    </div>
+                    <div>
+                        <h3>Catégorie</h3>
+                        <?php echo $room['désignation']; ?>
+                    </div>
+                    <div>
+                        <form meh3od="post" action="../view/reservation.php">
+                            <input type="submit" id="submit" name="submit" value="Reserver">
+                    </div>
+
+                    </form>
+                </section>
             <?php endforeach; ?>
-        </table>
+        </section>
     <?php else : ?>
         <p>Aucune chambre disponible pour les critères sélectionnés.</p>
     <?php endif; ?>
 </body>
+
 </html>
