@@ -55,12 +55,9 @@ class DBManager
         {
             header('Location:../view/recherche.php');
             $_SESSION["Login"] = $id;
-
         }  
-        
          } else header('Location:../view/connexion.php?error_id=Identifiants incorrects, veuillez vérifier vos informations de connexion') ;
-        } 
-        
+        }        
     }
 
 
