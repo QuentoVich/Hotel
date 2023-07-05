@@ -19,6 +19,83 @@
 
 }
 
+ul ul {
+    display: none;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease-in-out, visibility 0s linear 0.3s;
+}
+
+ul li:hover > ul {
+    display: block;
+    opacity: 1;
+    visibility: visible;
+    transition-delay: 0s;
+}
+
+li:hover{
+    color: #df5723;
+}
+
+header{
+    background-color: #45b398;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Style du menu */
+header nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+header nav ul li {
+    display: inline-block;
+    position: relative;
+}
+
+header nav ul li a {
+    display: block;
+    padding: 10px 20px 2px 20px;
+    color: #000;
+    text-decoration: none;
+}
+
+header nav ul ul {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #fff;
+    padding: 0;
+    transition: ease-in-out 0.5s;
+}
+
+header nav ul ul li {
+    width: 100%;
+    display: block;
+    transition: ease-in-out 0.5s;
+}
+
+header nav ul ul li:hover {
+    background-color:#df5723;
+    color: #fff;
+}
+
+header nav ul ul li a {
+    padding: 10px 40px;
+}
+
+nav{
+    display: flex;
+}
+nav li{
+    transition: ease-in-out 0.1s;
+    padding-bottom: 1px;
+}
+nav li:hover{
+    border-bottom: 3px solid rgb(0, 0, 0);
+}
 
 body{
     background-image: url('./items/fond_connexion.jpg');
@@ -26,9 +103,7 @@ body{
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    display: flex;
-    justify-content: center;
-    align-items: start;
+
     
     margin-top: 0;
 
@@ -37,15 +112,13 @@ body{
 
 
 }
-
-div{
-    display : flex;
-    flex-direction: column;
-    margin : 2%;
-    text-align: center;
-   
-    
+section {
+    display: flex;
+    justify-content: center;
+    align-items: start;
 }
+
+
 
 form {
     /* display: flex;
@@ -110,7 +183,10 @@ input#submit:hover{
     padding: 2rem;
     text-align: center;
 }
-
+.element{
+    display: flex;
+    flex-direction: column;
+}
 div #corps_form{
     padding: 0.5EM;
 }
