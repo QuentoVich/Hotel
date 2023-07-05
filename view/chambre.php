@@ -14,6 +14,7 @@
                 <th>Prix</th>
                 <th>Emplacement</th>
                 <th>Catégorie</th>
+                <th>Actions</th>
             </tr>
             <?php foreach ($availableRooms as $room) : ?>
                 <tr>
@@ -22,6 +23,7 @@
                     <td><?php echo $room['prix']; ?></td>
                     <td><?php echo $room['emplacement']; ?></td>
                     <td><?php echo $room['désignation']; ?></td>
+                    <td><a href="../view/reservation.php?chambre=<?php echo $room['Num_Chamb']; ?>&prix=<?php echo $room['prix']; ?>">Réserver</a></td>
                 </tr>
             <?php endforeach; ?>
         </table>
