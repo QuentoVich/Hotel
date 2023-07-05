@@ -30,6 +30,7 @@
                 <div>
                     <!-- readonly -->
                     <label for="prix">Prix :</label>
+                    <?php ?>
                     <input type="text" name="prix" id="prix" required>
                 </div>
 
