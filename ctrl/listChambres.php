@@ -10,18 +10,20 @@ $db = new DBManager();
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     // Récupération des valeurs du formulaire
     $categorie = $_POST['categorie'];
-    $dateDebut = $_POST['date_debut'];
-    $dateFin = $_POST['date_fin'];
+    $_SESSION['DATEDEBUT'] = $_POST['date_debut'];
+    $_SESSION['DATEFIN'] = $_POST['date_fin'];
 
+    print_r($_POST['date_debut']);
+   
     // Obtention des chambres disponibles
     $availableRooms = $db->getAvailableRooms($categorie, $dateDebut, $dateFin);
 
-    // Affichage de la vue avec les chambres disponibles
 
     header('Location: ../view/chambre.php?rooms=' . urlencode(serialize($availableRooms)));
+    include '../view/chambre.php';
 } else {
-    // Affichage du formulaire de réservation
     header('Location:../view/recherche.php');
+    include '../view/recherche.php';
 }
 
 
