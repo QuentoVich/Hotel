@@ -13,7 +13,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $_SESSION['DATEDEBUT'] = $_POST['date_debut'];
     $_SESSION['DATEFIN'] = $_POST['date_fin'];
 
-   
+
     // Obtention des chambres disponibles
     $availableRooms = $db->getAvailableRooms($categorie, $dateDebut, $dateFin);
 
