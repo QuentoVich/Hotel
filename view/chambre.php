@@ -1,4 +1,4 @@
-git <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -7,7 +7,7 @@ git <!DOCTYPE html>
 </head>
 
 <body>
-    <h1>Chambres disponibles</h1>
+   
 
     <?php
     $availableRooms = [];
@@ -18,15 +18,21 @@ git <!DOCTYPE html>
 
     <?php if (!empty($availableRooms)) : ?>
         <section class="chambres">
-          
+        <h1>Chambres disponibles</h1>
             <?php foreach ($availableRooms as $room) : ?>
                 <section class = "carte_chambre">
-                    <div>
-                        <h3>Numéro de chambre</h3>
+                <div class="info_chambre">
+
+                        <div>
+                        <div class="h3">
+                            <h3>Numéro de chambre</h3>
                         <?php echo $room['Num_Chamb']; ?>
+                        </div>
                     </div>
                     <div>
+                        <div class="h3">
                         <h3>Étage</h3>
+                        </div>
                         <?php echo $room['etage']; ?>
                     </div>
                     <div>
@@ -41,9 +47,10 @@ git <!DOCTYPE html>
                         <h3>Catégorie</h3>
                         <?php echo $room['désignation']; ?>
                     </div>
-                    <div>
-                    <td><a href="../view/reservation.php?chambre=<?php echo $room['Num_Chamb']; ?>&prix=<?php echo $room['prix']; ?>">Réserver</a></td>
+                    <div class="bouton_reservation">
+                        <td><a href="../view/reservation.php?chambre=<?php echo $room['Num_Chamb']; ?>&prix=<?php echo $room['prix']; ?>">Réserver</a></td>
                     </div>
+                </div>
 
                     </form>
                 </section>

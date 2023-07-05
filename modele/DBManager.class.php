@@ -75,7 +75,8 @@ class DBManager
                     SELECT Num_Chamb FROM reservation
                     WHERE (date_Entrée BETWEEN :dateEntree AND :dateSortie)
                     OR (date_Sortie BETWEEN :dateEntree AND :dateSortie)
-                )";
+                    
+                )ORDER BY chambre.prix ASC";
 
         // Préparer la requête
         $stmt = $this->bdd->prepare($sql);
