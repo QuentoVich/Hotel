@@ -48,35 +48,48 @@ class DBManager
         if ($result->rowCount() > 0)
 
         {
-            $bdd = $result->fetchAll();
+            $db = $result->fetchAll();
+            $mdp = hash('sha256', $mdp);
 
-        if (password_verify($mdp, $bdd["mot_De_Passe"]))
-        
+        if ($mdp === $mdp) 
         {
-            echo "Connexion effectuée, bien ouej Leïla !";
+            header('Location:../view/recherche.php');
             $_SESSION["Login"] = $id;
-        }
 
-        }
-        }
+        } else header('Location:../view/connexion.php?login_err=mdp');
+        } else header('Location:../view/connexion.php?login_err=id');
+        } else header('Location:../view/connexion.php?login_err=already');
     }
 
 
+    public function getAvailableRooms($categorie, $dateEntree, $dateSortie)
+    {
+        // Requête pour récupérer les chambres disponibles
+        $sql = "SELECT chambre.Num_Chamb, chambre.etage, chambre.prix, chambre.emplacement, categorie.désignation
+                FROM chambre
+                INNER JOIN categorie ON chambre.Code_Categorie = categorie.Code_Categorie
+                WHERE chambre.Code_Categorie = :categorie
+                AND chambre.Num_Chamb NOT IN (
+                    SELECT Num_Chamb FROM reservation
+                    WHERE (date_Entrée BETWEEN :dateEntree AND :dateSortie)
+                    OR (date_Sortie BETWEEN :dateEntree AND :dateSortie)
+                )";
 
+        // Préparer la requête
+        $stmt = $this->bdd->prepare($sql);
 
+        // Bind des paramètres
+        $stmt->bindParam(':categorie', $categorie);
+        $stmt->bindParam(':dateEntree', $dateEntree);
+        $stmt->bindParam(':dateSortie', $dateSortie);
 
-        // //methode qui supprime un employe par son noemp
-        // public function supprEmploye($noemp) : void {
+        // Exécuter la requête
+        $stmt->execute();
 
-    // }
+        // Récupérer les résultats
+        $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
-    // //methode qui mets à jour le salaire d'un amployé
-    // public function updateSalaireEmploye($noemp, $sal) : void {
-
-    // }
-
+        return $result;
     }
-
-
 
 }

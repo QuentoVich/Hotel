@@ -9,7 +9,7 @@
 
 <body>
 
-    <form class="form" action="../ctrl/execute.php" method="POST">
+    <form class="form" action="../ctrl/authentification.php" method="POST">
         <div id="titre">
             <h1>Connexion</h1>
         </div>
@@ -20,11 +20,10 @@
         </div>
         <div class="element">
             <label for="mdp">Mot de passe : </label>
-            <input id="mdp" name="mdp" type="password" placeholder="Entrez votre mot de passe" />
+            <input id="mdp" name="mdp" type="password" placeholder="Entrez votre mot de passe" required />
         </div>
         <input type="submit" id="submit" name="submit" value="Envoyer" />
         </DIV>
     </form>
 </body>
-
 </html>
