@@ -15,6 +15,7 @@
                 <h1>MA <br> RESERVATION</h1>
             </div>
           
+          
             <DIV id="corps_form">
 
                 <div>
@@ -22,6 +23,7 @@
                     <input type="text" name="chambre" id="chambre" value="<?php echo $chambre = $_GET['chambre'];?>" readonly>
                     
                 </div>
+                
                 
                 <div>
                     <label for="description">Description :</label>
@@ -37,12 +39,12 @@
 
                 <div>
                     <label for="date_debut">Date de début :</label>
-                    <input type="date" id="date_debut" name="date_debut" value="<?php echo $_SESSION['DATEDEBUT']?>" required>
+                    <input type="int" id="date_debut" name="date_debut" value="<?php echo $_SESSION['DATEDEBUT']?>" required>
                 </div>
 
                 <div>
                     <label for="date_fin">Date de fin :</label>
-                    <input type="date" id="date_fin" name="date_fin" value="<?php echo $_SESSION['DATEDEBUT']?>" required>
+                    <input type="date" id="date_fin" name="date_fin" value="<?php echo $_SESSION['DATEFIN']?>" required>
                 </div>
 
                 <div>

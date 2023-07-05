@@ -20,13 +20,33 @@ git <!DOCTYPE html>
         <section class="chambres">
           
             <?php foreach ($availableRooms as $room) : ?>
-                <tr>
-                    <td><?php echo $room['Num_Chamb']; ?></td>
-                    <td><?php echo $room['etage']; ?></td>
-                    <td><?php echo $room['prix']; ?></td>
-                    <td><?php echo $room['emplacement']; ?></td>
-                    <td><?php echo $room['désignation']; ?></td>
-                </tr>
+                <section class = "carte_chambre">
+                    <div>
+                        <h3>Numéro de chambre</h3>
+                        <?php echo $room['Num_Chamb']; ?>
+                    </div>
+                    <div>
+                        <h3>Étage</h3>
+                        <?php echo $room['etage']; ?>
+                    </div>
+                    <div>
+                        <h3>Prix</h3>
+                        <?php echo $room['prix']; ?>
+                    </div>
+                    <div>
+                        <h3>Emplacement</h3>
+                        <?php echo $room['emplacement']; ?>
+                    </div>
+                    <div>
+                        <h3>Catégorie</h3>
+                        <?php echo $room['désignation']; ?>
+                    </div>
+                    <div>
+                    <td><a href="../view/reservation.php?chambre=<?php echo $room['Num_Chamb']; ?>&prix=<?php echo $room['prix']; ?>">Réserver</a></td>
+                    </div>
+
+                    </form>
+                </section>
             <?php endforeach; ?>
         </section>
     <?php else : ?>
