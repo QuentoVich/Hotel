@@ -1,3 +1,5 @@
+
+
 <!DOCTYPE html>
 <html>
 
@@ -8,7 +10,6 @@
 </head>
 
 <body>
-
     <form class="form" action="../ctrl/authentification.php" method="POST">
         <div id="titre">
             <h1>Connexion</h1>
@@ -22,6 +23,16 @@
             <label for="mdp">Mot de passe : </label>
             <input id="mdp" name="mdp" type="password" placeholder="Entrez votre mot de passe" required />
         </div>
+        <?php
+if (isset($_GET ['error_mdp'])) { ?>
+    <p class = "error"><?php echo $_GET['error_mdp']; ?> </p>
+<?php } ;
+if (isset($_GET ['error_id'])) { ?>
+    <p class = "error"><?php echo $_GET['error_id']; ?> </p>
+<?php } ?>
+
+
+
         <input type="submit" id="submit" name="submit" value="Envoyer" />
         </DIV>
     </form>

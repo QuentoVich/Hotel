@@ -4,6 +4,7 @@ session_start();
 
 include "../modele/DBManager.class.php";
 
+
 $db = new DBManager();
 
 $id = $_POST['id'];
