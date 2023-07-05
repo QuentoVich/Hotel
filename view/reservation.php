@@ -37,12 +37,12 @@
 
                 <div>
                     <label for="date_debut">Date de début :</label>
-                    <input type="date" id="date_debut" name="date_debut" value="<?php echo $_SESSION['DATEDEBUT']?>" required>
+                    <input type="int" id="date_debut" name="date_debut" value="<?php echo $_SESSION['DATEDEBUT']?>" required>
                 </div>
 
                 <div>
                     <label for="date_fin">Date de fin :</label>
-                    <input type="date" id="date_fin" name="date_fin" value="<?php echo $_SESSION['DATEDEBUT']?>" required>
+                    <input type="date" id="date_fin" name="date_fin" value="<?php echo $_SESSION['DATEFIN']?>" required>
                 </div>
 
                 <div>

@@ -42,8 +42,7 @@
                         <?php echo $room['désignation']; ?>
                     </div>
                     <div>
-                        <form meh3od="post" action="../view/reservation.php">
-                            <input type="submit" id="submit" name="submit" value="Reserver">
+                    <td><a href="../view/reservation.php?chambre=<?php echo $room['Num_Chamb']; ?>&prix=<?php echo $room['prix']; ?>">Réserver</a></td>
                     </div>
 
                     </form>
