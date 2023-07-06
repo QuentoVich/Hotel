@@ -6,39 +6,50 @@
     <link href="./style.chambre.css" rel="stylesheet">
 </head>
 <header>
+<div id="logo">
+  <div id="element3">
+                <h1>Time <br> to <br> Travel</h1>
+            </div> 
+</div>
+           
     <nav>
+    <div id="el_nav1">
         <div id="element1">
 
             <ul>
                 <li>
                     <a href="#" alt="Toutes nos chambres" target="_blank">Nos chambres</a>
                     <ul>
-                        <li><a href="#" alt="Chambre Simple" target="_blank">Chambre Simple</a></li>
+                        <li><a href="#" alt="Chambre Simple" > Chambre Simple</a></li>
                         <li><a href="#" alt="Chambre Double" target="_blank">Chambre Double</a></li>
                         <li><a href="#" alt="Suite" target="_blank">Suite</a></li>
                     </ul>
                 </li>
             </ul>
         </div>
-        <div>
+        <div id="element2">
             <ul>
                 <li><a href="#" alt="Réserver" target="_blank">Réserver</a></li>
             </ul>
         </div>
+    </div>
+            
         </div>
-        <div id="element2">
+        <div id="element4">
             <ul>
                 <li>
                     <a href="#" alt="Mon profil" target="_blank">Mon profil</a>
                     <ul>
                         <li><a href="#" alt="Mes réservations" target="_blank">Mes réservations</a></li>
                         <li><a href="#" alt="Mes informations" target="_blank">Mes informations</a></li>
+                        <li><a href="./connexion.php" alt="Deconnexion"  >Se deconnecter</a></li>
                     </ul>
                 </li>
             </ul>
         </div>
     </nav>
 </header>
+
 
 <body>
 
@@ -82,8 +93,8 @@
                             <?php echo $room['désignation']; ?>
                         </div>
                         <div class="bouton_reservation">
-                            <td><a href="../view/reservation.php?chambre=<?php echo $room['Num_Chamb']; ?>&prix=<?php echo $room['prix']; ?>">Réserver</a></td>
-                        </div>
+                        <td><a href="../view/reservation.php?chambre=<?php echo $room['Num_Chamb']; ?>&prix=<?php echo $room['prix']; ?>&emplacement=<?php echo $room['emplacement']; ?>">Réserver</a></td>                        
+                    </div>
                     </div>
 
                     </form>

@@ -43,8 +43,14 @@ li:hover {
 
 header {
   background-color: #45b398;
-  padding: 20px;
   text-align: center;
+  padding: 20px;
+}
+
+#logo{
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 /* Style du menu */
@@ -89,8 +95,15 @@ header nav ul ul li:hover {
 header nav ul ul li a {
   padding: 10px 40px;
 }
+#elemnt2{
+  margin-left: 5%;
+  margin-right: 10%;
+}
 
 #element3{
+  display: flex;
+  justify-content: center;
+  align-items: center;
   font-family: "The Rustic";
   font-size: 1.5em;
   color: #fad1a5;
@@ -99,17 +112,31 @@ header nav ul ul li a {
   box-shadow:  20px 20px 60px #3b9881,
                -20px -20px 60px #4fceaf;
   padding: 30px;
+  width: 20%;
+ 
 }
 
 
 nav {
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   align-items: center;
+  padding: 20px;
 }
 #el_nav1{
   display: flex;
   justify-content: space-around;
+}
+nav li {
+  font-size: 1.2em;
+  transition: ease-in-out 0.1s;
+  padding-bottom: 1px;
+}
+nav li:hover {
+  border-bottom: 3px solid rgb(0, 0, 0);
+}
+nav {
+  display: flex;
 }
 nav li {
   transition: ease-in-out 0.1s;
@@ -224,6 +251,7 @@ input::placeholder {
 .element {
   width: 100%;
   font-size: 2em;
+  margin-bottom: 5%;
 }
 
 .error {

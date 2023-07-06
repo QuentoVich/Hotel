@@ -3,7 +3,7 @@ include "../modele/DBManager.class.php";
 $db = new DBManager();
 
 
-
+session_start();
 
 
 // Vérification si le formulaire a été soumis
@@ -19,10 +19,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
 
     header('Location: ../view/chambre.php?rooms=' . urlencode(serialize($availableRooms)));
-    include '../view/chambre.php';
 } else {
     header('Location:../view/recherche.php');
-    include '../view/recherche.php';
+  
 }
 
 

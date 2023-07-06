@@ -46,8 +46,14 @@ li:hover {
 
 header {
   background-color: #45b398;
-  padding: 20px;
   text-align: center;
+  padding: 20px;
+}
+
+#logo{
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 /* Style du menu */
@@ -92,8 +98,15 @@ header nav ul ul li:hover {
 header nav ul ul li a {
   padding: 10px 40px;
 }
+#elemnt2{
+  margin-left: 5%;
+  margin-right: 10%;
+}
 
 #element3{
+  display: flex;
+  justify-content: center;
+  align-items: center;
   font-family: "The Rustic";
   font-size: 1.5em;
   color: #fad1a5;
@@ -102,19 +115,23 @@ header nav ul ul li a {
   box-shadow:  20px 20px 60px #3b9881,
                -20px -20px 60px #4fceaf;
   padding: 30px;
+  width: 20%;
+ 
 }
 
 
 nav {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
+  padding: 20px;
 }
 #el_nav1{
   display: flex;
   justify-content: space-around;
 }
 nav li {
+  font-size: 1.2em;
   transition: ease-in-out 0.1s;
   padding-bottom: 1px;
 }
@@ -157,7 +174,7 @@ body section {
   align-items: center;
   text-align: center;
   background-color: #623a2e;
-  padding: 10px;
+  padding: 20px;
   color: #fff;
 }
 
@@ -166,21 +183,12 @@ body section {
 
 .formulaire {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: space-around;
   align-items: center;
 }
 
 
-
-
-
-
-
-#chambres{
-  display: flex;
-  flex-direction: column;
-}
 form {
   display: flex;
   flex-direction: column;
@@ -203,20 +211,44 @@ form {
   padding: 2em;
 }
 
+form select{
+  font-family: "Caslon Regular";
+  font-size: 1.5em;;
+  border-radius: 10px;
+  padding: 20px;
+  text-align: center;
+  transition: ease-in-out 0.3s;
+}
+form select:hover{
+  background-color: #a5ebd9;
+}
+
+.element_form{
+  display: flex;
+  flex-direction: column;
+  margin-top: 5%;
+}
+
 
 
 
 
 label {
   font-size: 1.8em;
+  margin-bottom: 3%;
 }
 
 
 div input {
+  font-family: "Caslon Regular";
   border-radius: 2rem;
   padding: 1rem;
   border-style: none;
   text-align: center;
+  transition: ease-in-out 0.3s;
+}
+div input:hover{
+  background-color: #a5ebd9;
 }
 
 form input#submit {
@@ -233,6 +265,7 @@ form input#submit {
   transition: ease-in-out 0.5s;
   font-size: 1.5em;
   cursor: pointer;
+  color: #fff;
 }
 
 input#submit:hover {

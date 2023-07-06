@@ -29,6 +29,7 @@ class DBManager
 
         // Afficher le numéro de réservation
         echo "Réservation effectuée avec succès !\nNuméro de réservation : " . $num_Reservation;
+        header("Location:../view/recherche.php");
     }
 
     public function connexionUtilisateur(): void

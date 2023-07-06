@@ -7,6 +7,12 @@
 </head>
 
 <header>
+<div id="logo">
+  <div id="element3">
+                <h1>Time <br> to <br> Travel</h1>
+            </div> 
+</div>
+           
     <nav>
     <div id="el_nav1">
         <div id="element1">
@@ -15,7 +21,7 @@
                 <li>
                     <a href="#" alt="Toutes nos chambres" target="_blank">Nos chambres</a>
                     <ul>
-                        <li><a href="#" alt="Chambre Simple" target="_blank">Chambre Simple</a></li>
+                        <li><a href="#" alt="Chambre Simple" > Chambre Simple</a></li>
                         <li><a href="#" alt="Chambre Double" target="_blank">Chambre Double</a></li>
                         <li><a href="#" alt="Suite" target="_blank">Suite</a></li>
                     </ul>
@@ -28,9 +34,7 @@
             </ul>
         </div>
     </div>
-            <div id="element3">
-                <h1>Time <br> to <br> Travel</h1>
-            </div>
+            
         </div>
         <div id="element4">
             <ul>
@@ -39,6 +43,7 @@
                     <ul>
                         <li><a href="#" alt="Mes réservations" target="_blank">Mes réservations</a></li>
                         <li><a href="#" alt="Mes informations" target="_blank">Mes informations</a></li>
+                        <li><a href="./connexion.php" alt="Deconnexion"  >Se deconnecter</a></li>
                     </ul>
                 </li>
             </ul>
@@ -88,12 +93,7 @@
       </form>
     </div>
 
-    <div id="deconnexion">
-      <form action="connexion.php" method="post">
-        <input type="submit" name="submit" value="Se déconnecter">
-        <?php session_destroy(); ?>
-      </form>
-    </div>
+
 </body>
 
 </html>
