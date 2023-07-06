@@ -25,24 +25,31 @@
                 
                 <div>
                     <label for="description">Description :</label>
-                    <input type="text" name="description" id="description" value="<?php echo $chambre = $_GET['chambre'];?>" readonly>
+                    <input type="text" name="description" id="description" value="<?php echo $_GET['emplacement']; ?>" readonly>
                     
                 </div>
 
                 <div>
-                    <!-- readonly -->
-                    <label for="prix">Prix :</label>
-                    <input type="text" name="prix" id="prix" value="<?php echo $prix = $_GET['prix'];?>" readonly>
+                    <label for="prix">Prix par nuit :</label>
+                    <input type="text" name="prix_par_jour" id="prix_par_jour" value="<?php echo $_GET['prix']; ?>" readonly>
                 </div>
 
+                
+                
+<div>
+    <label for="prix_total">Prix total :</label>
+    <input type="text" name="prix_total" id="prix_total" value="<?php echo calculerPrixTotal($_GET['prix'], $_SESSION['DATEDEBUT'], $_SESSION['DATEFIN']); ?>" readonly>
+</div>
+      
+            
                 <div>
                     <label for="date_debut">Date de début :</label>
-                    <input type="int" id="date_debut" name="date_debut" value="<?php echo $_SESSION['DATEDEBUT']?>" required>
+                    <input type="text" id="date_debut" name="date_debut" value="<?php echo $_SESSION['DATEDEBUT']; ?>" required>
                 </div>
 
                 <div>
                     <label for="date_fin">Date de fin :</label>
-                    <input type="date" id="date_fin" name="date_fin" value="<?php echo $_SESSION['DATEFIN']?>" required>
+                    <input type="text" id="date_fin" name="date_fin" value="<?php echo $_SESSION['DATEFIN']; ?>" required>
                 </div>
 
                 <div>

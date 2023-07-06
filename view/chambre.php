@@ -42,7 +42,7 @@
                         <?php echo $room['désignation']; ?>
                     </div>
                     <div>
-                    <td><a href="../view/reservation.php?chambre=<?php echo $room['Num_Chamb']; ?>&prix=<?php echo $room['prix']; ?>">Réserver</a></td>
+                    <td><a href="../view/reservation.php?chambre=<?php echo $room['Num_Chamb']; ?>&prix=<?php echo $room['prix']; ?>&emplacement=<?php echo $room['emplacement']; ?>">Réserver</a></td>
                     </div>
 
                     </form>
