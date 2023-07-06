@@ -15,42 +15,7 @@
             </div> 
 </div>
            
-    <nav>
-    <div id="el_nav1">
-        <div id="element1">
-
-            <ul>
-                <li>
-                    <a href="#" alt="Toutes nos chambres" target="_blank">Nos chambres</a>
-                    <ul>
-                        <li><a href="#" alt="Chambre Simple" > Chambre Simple</a></li>
-                        <li><a href="#" alt="Chambre Double" target="_blank">Chambre Double</a></li>
-                        <li><a href="#" alt="Suite" target="_blank">Suite</a></li>
-                    </ul>
-                </li>
-            </ul>
-        </div>
-        <div id="element2">
-            <ul>
-                <li><a href="#" alt="Réserver" target="_blank">Réserver</a></li>
-            </ul>
-        </div>
-    </div>
-            
-        </div>
-        <div id="element4">
-            <ul>
-                <li>
-                    <a href="#" alt="Mon profil" target="_blank">Mon profil</a>
-                    <ul>
-                        <li><a href="#" alt="Mes réservations" target="_blank">Mes réservations</a></li>
-                        <li><a href="#" alt="Mes informations" target="_blank">Mes informations</a></li>
-                        <li><a href="./connexion.php" alt="Deconnexion"  >Se deconnecter</a></li>
-                    </ul>
-                </li>
-            </ul>
-        </div>
-    </nav>
+   
 </header>
 
 
@@ -71,7 +36,8 @@
 
             <div class="element_form">
                     <label for="chambre">Chambre :</label>
-                    <input type="text" name="chambre" id="chambre" required>
+                    <input type="text" name="chambre" id="chambre" value="<?php echo $chambre = $_GET['chambre']; ?>" readonly>
+
                 </div>
 
 
@@ -88,12 +54,12 @@
 
                 <div class="element_form">
                     <label for="date_debut">Date de début :</label>
-                    <input type="text" id="date_debut" name="date_debut" value="<?php echo $_SESSION['DATEDEBUT']; ?>" required>
+                    <input type="text" id="date_debut" name="date_debut" value="<?php echo $_SESSION['DATEDEBUT']; ?>" readonly>
                 </div>
 
                 <div class="element_form">
                     <label for="date_fin">Date de fin :</label>
-                    <input type="text" id="date_fin" name="date_fin" value="<?php echo $_SESSION['DATEFIN']; ?>" required>
+                    <input type="text" id="date_fin" name="date_fin" value="<?php echo $_SESSION['DATEFIN']; ?>" readonly>
                 </div>
 
                 <div class="element_form">
