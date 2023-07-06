@@ -23,7 +23,7 @@
             <input id="mdp" name="mdp" type="password" placeholder="Entrez votre mot de passe" required />
         </div>
         <input type="submit" id="submit" name="submit" value="Envoyer" />
-        </DIV>
+         </div>
     </form>
 </body>
 </html>

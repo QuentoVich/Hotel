@@ -56,7 +56,9 @@ class DBManager
             header('Location:../view/recherche.php');
             $_SESSION["Login"] = $id;
 
-        } else header('Location:../view/connexion.php?login_err=mdp');
+        } else 
+        
+        header('Location:../view/connexion.php?login_err=mdp');
         } else header('Location:../view/connexion.php?login_err=id');
         } else header('Location:../view/connexion.php?login_err=already');
     }
