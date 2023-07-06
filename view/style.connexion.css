@@ -13,6 +13,11 @@
   src: url(./items/Font/F37Caslon-ExtraBoldDisplay.otf);
 }
 
+@font-face{
+  font-family: "The Rustic";
+  src: url(./items/Font/TheRustic-Demo.ttf);
+}
+
 * {
   padding: 0px;
   margin: 0px;
@@ -85,8 +90,26 @@ header nav ul ul li a {
   padding: 10px 40px;
 }
 
+#element3{
+  font-family: "The Rustic";
+  font-size: 1.5em;
+  color: #fad1a5;
+  border-radius: 50px;
+  background: #45b398;
+  box-shadow:  20px 20px 60px #3b9881,
+               -20px -20px 60px #4fceaf;
+  padding: 30px;
+}
+
+
 nav {
   display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+#el_nav1{
+  display: flex;
+  justify-content: space-around;
 }
 nav li {
   transition: ease-in-out 0.1s;
@@ -148,7 +171,7 @@ input#submit {
   height: 1rem;
   padding: 1rem;
   text-align: center;
-  margin-top: 5%;
+  margin-top: 10%;
   height: 100%;
   background-color: #45b398;
   transition: ease-in-out 0.5s;

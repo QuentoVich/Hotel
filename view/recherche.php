@@ -5,39 +5,45 @@
   <title>Chambres disponibles</title>
   <link href="./style.recherche.css" rel="stylesheet">
 </head>
-<header>
-  <nav>
-    <div id="element1">
 
-      <ul>
-        <li>
-          <a href="#" alt="Toutes nos chambres" target="_blank">Nos chambres</a>
-          <ul>
-            <li><a href="#" alt="Chambre Simple" target="_blank">Chambre Simple</a></li>
-            <li><a href="#" alt="Chambre Double" target="_blank">Chambre Double</a></li>
-            <li><a href="#" alt="Suite" target="_blank">Suite</a></li>
-          </ul>
-        </li>
-      </ul>
+<header>
+    <nav>
+    <div id="el_nav1">
+        <div id="element1">
+
+            <ul>
+                <li>
+                    <a href="#" alt="Toutes nos chambres" target="_blank">Nos chambres</a>
+                    <ul>
+                        <li><a href="#" alt="Chambre Simple" target="_blank">Chambre Simple</a></li>
+                        <li><a href="#" alt="Chambre Double" target="_blank">Chambre Double</a></li>
+                        <li><a href="#" alt="Suite" target="_blank">Suite</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        <div id="element2">
+            <ul>
+                <li><a href="#" alt="Réserver" target="_blank">Réserver</a></li>
+            </ul>
+        </div>
     </div>
-    <div>
-      <ul>
-        <li><a href="#" alt="Réserver" target="_blank">Réserver</a></li>
-      </ul>
-    </div>
-    </div>
-    <div id="element2">
-      <ul>
-        <li>
-          <a href="#" alt="Mon profil" target="_blank">Mon profil</a>
-          <ul>
-            <li><a href="#" alt="Mes réservations" target="_blank">Mes réservations</a></li>
-            <li><a href="#" alt="Mes informations" target="_blank">Mes informations</a></li>
-          </ul>
-        </li>
-      </ul>
-    </div>
-  </nav>
+            <div id="element3">
+                <h1>Time <br> to <br> Travel</h1>
+            </div>
+        </div>
+        <div id="element4">
+            <ul>
+                <li>
+                    <a href="#" alt="Mon profil" target="_blank">Mon profil</a>
+                    <ul>
+                        <li><a href="#" alt="Mes réservations" target="_blank">Mes réservations</a></li>
+                        <li><a href="#" alt="Mes informations" target="_blank">Mes informations</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </nav>
 </header>
 
 <body>
@@ -46,11 +52,11 @@
 
           session_start();
 
-          $bienvenue = "Bonjour et bienvenue " . $_SESSION['Login'] . " dans notre site !";
+          $bienvenue = "Bonjour " . $_SESSION['Login'] . " !";
 
           echo $bienvenue;
 
-          ?> <br><br>Que souhaitez-vous ? </h1>
+          ?> <br><br>Que recherchez-vous ? </h1>
   </DIV>
 
 
@@ -67,12 +73,12 @@
           <option value="3">Chambre Simple</option>
         </select>
 
-        <div>
+        <div class = "element_form">
           <label for="date_debut">Date de début :</label>
           <input type="date" id="date_debut" name="date_debut" required>
         </div>
 
-        <div>
+        <div class = "element_form">
           <label for="date_fin">Date de fin :</label>
           <input type="date" id="date_fin" name="date_fin" required>
         </div>
