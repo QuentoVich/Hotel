@@ -66,12 +66,12 @@
             </div>
 
 
+
             <DIV id="corps_form">
 
             <div class="element_form">
                     <label for="chambre">Chambre :</label>
-                    <input type="text" name="chambre" id="chambre" value="<?php echo $chambre = $_GET['chambre']; ?>" readonly>
-
+                    <input type="text" name="chambre" id="chambre" required>
                 </div>
 
 
@@ -107,6 +107,7 @@
                 <input type="hidden" name="id_chambre" value="<?php echo $id_chambre; ?>">
 
                 <input type="submit" id="submit" name="submit" value="Reserver">
+
             </DIV>
         </form>
 
@@ -117,6 +118,7 @@
 
 
 </body>
+
 
 
 </html>

@@ -64,7 +64,12 @@
           ?> <br><br>Que recherchez-vous ? </h1>
   </DIV>
 
+ <div > <?php
+        if (isset($_GET['resa'])) {?>
 
+       <p class = "resa"> <?php echo $_GET['resa'];?></p>
+      <?php } ?> 
+        </div>
 
   <div class="formulaire">
 
@@ -92,7 +97,6 @@
         <input type="submit" id="submit" name="submit" value="Afficher les chambres disponibles ">
       </form>
     </div>
-
 
 </body>
 

@@ -1,14 +1,20 @@
 @font-face {
   font-family: "Caslon Semi_Bold";
   src: url(./items/Font/F37Caslon-SemiBoldDisplay.otf);
+  font-family: "Caslon Semi_Bold";
+  src: url(./items/Font/F37Caslon-SemiBoldDisplay.otf);
 }
 
 @font-face {
   font-family: "Caslon Regular";
   src: url(./items/Font/F37Caslon-RegularDisplay.otf);
+  font-family: "Caslon Regular";
+  src: url(./items/Font/F37Caslon-RegularDisplay.otf);
 }
 
 @font-face {
+  font-family: "Caslon ExtraBold";
+  src: url(./items/Font/F37Caslon-ExtraBoldDisplay.otf);
   font-family: "Caslon ExtraBold";
   src: url(./items/Font/F37Caslon-ExtraBoldDisplay.otf);
 }
@@ -163,7 +169,13 @@ body section {
   display: flex;
   justify-content: center;
   align-items: center;
+body section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
+
+
 
 
 
@@ -268,6 +280,11 @@ form input#submit {
   color: #fff;
 }
 
+input#submit:hover {
+  color: black;
+  background-color: #fce6cf;
+  transform: scale(110%);
+  box-shadow: 0px 0px 30px #623a2e;
 input#submit:hover {
   color: black;
   background-color: #fce6cf;
