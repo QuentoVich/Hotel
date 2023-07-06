@@ -28,7 +28,7 @@ class DBManager
         $num_Reservation = $stmt->fetchColumn();
 
         // Afficher le numéro de réservation et redirection vers recherche
-        header('Location:../view/recherche.php?resa=Votre  réservation n° ' . $num_Reservation . ' a été effectuée avec succès !');
+        header('Location:../view/recherche.php?resa=Votre  réservation n° ' . $num_Reservation . ' a été effectuée avec succès ! <br> Bon séjour !');
     }
 
     public function connexionUtilisateur(): void

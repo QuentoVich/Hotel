@@ -174,7 +174,7 @@ body section {
   align-items: start;
 }
 
-input#submit {
+input#submit , .modif {
   border-radius: 1rem;
   height: 1rem;
   padding: 1rem;
@@ -187,12 +187,40 @@ input#submit {
   cursor: pointer;
 }
 
+input#submit{
+  background-color: 
+  #256668;
+  color: #fce6cf;
+}
+
+.modif{
+  background-color: #45b398;
+  text-decoration: none;
+  color: #000000;
+  width: 50%;
+}
+.modif:hover{
+  color: black;
+  background-color: #fce6cf;
+  transform: scale(120%);
+  box-shadow: 0px 0px 30px #623a2e;
+}
+
+
 input#submit:hover {
   color: black;
   background-color: #fce6cf;
   transform: scale(110%);
   box-shadow: 0px 0px 30px #623a2e;
 }
+
+#check{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
 
 form {
   display: flex;

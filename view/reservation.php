@@ -69,11 +69,14 @@
 
               
 
-
+<div id="check">
                 <input type="hidden" name="id_chambre" value="<?php echo $id_chambre; ?>">
+                
+                <a href="./recherche.php" alt="retour à la recherche" class = modif >Modifier mes dates</a>
 
                 <input type="submit" id="submit" name="submit" value="Reserver">
 
+</div>
             </DIV>
         </form>
 
