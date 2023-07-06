@@ -1,107 +1,172 @@
 @font-face {
     font-family: "Caslon Semi_Bold";
     src: url(./items/Font/F37Caslon-SemiBoldDisplay.otf);
-}
-
-@font-face {
+  }
+  
+  @font-face {
     font-family: "Caslon Regular";
     src: url(./items/Font/F37Caslon-RegularDisplay.otf);
-}
-
-@font-face {
+  }
+  
+  @font-face {
     font-family: "Caslon ExtraBold";
     src: url(./items/Font/F37Caslon-ExtraBoldDisplay.otf);
-}
-
-*{
-    padding : 0px;
-    margin : 0px;
-
-}
-
-form {
+  }
+  
+  * {
+    padding: 0px;
+    margin: 0px;
+  }
+  ul ul {
+    display: none;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease-in-out, visibility 0s linear 0.3s;
+  }
+  
+  ul li:hover > ul {
+    display: block;
+    opacity: 1;
+    visibility: visible;
+    transition-delay: 0s;
+  }
+  
+  li:hover {
+    color: #df5723;
+  }
+  
+  header {
+    background-color: #45b398;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  /* Style du menu */
+  header nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  header nav ul li {
+    display: inline-block;
+    position: relative;
+  }
+  
+  header nav ul li a {
+    display: block;
+    padding: 10px 20px 2px 20px;
+    color: #000;
+    text-decoration: none;
+  }
+  
+  header nav ul ul {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #fff;
+    padding: 0;
+    transition: ease-in-out 0.5s;
+  }
+  
+  header nav ul ul li {
+    width: 100%;
+    display: block;
+    transition: ease-in-out 0.5s;
+  }
+  
+  header nav ul ul li:hover {
+    background-color: #df5723;
+    color: #fff;
+  }
+  
+  header nav ul ul li a {
+    padding: 10px 40px;
+  }
+  
+  nav {
+    display: flex;
+  }
+  nav li {
+    transition: ease-in-out 0.1s;
+    padding-bottom: 1px;
+  }
+  nav li:hover {
+    border-bottom: 3px solid rgb(0, 0, 0);
+  }
+  form {
     display: flex;
     flex-direction: column;
     justify-content: center;
     box-shadow: 1px 1px 12px 3px #000000;
     width: 500px;
     height: auto;
-    margin-top:  20%; 
+    margin-top: 20%;
     margin-bottom: 20%;
     text-align: center;
-    border-radius: 2REM;
-    background: rgb(252,230,207);
-    background: linear-gradient(212deg, rgba(252,230,207,1) 18%, rgba(223,87,35,1) 92%);
+    border-radius: 2rem;
+    background: rgb(252, 230, 207);
+    background: linear-gradient(
+      212deg,
+      rgba(252, 230, 207, 1) 18%,
+      rgba(223, 87, 35, 1) 92%
+    );
     /* background-image: url('./items/fond2.jpg'); */
     border: #ffffff solid;
-   
-}
-
-label{
+  }
+  
+  label {
     font-size: 1.8em;
-}
-
-#titre{
+  }
+  
+  #titre {
     color: #ffffff;
     text-shadow: 0px 0px 40px rgb(214, 212, 212);
     background-color: #df5723;
     width: 100%;
     margin: 0;
-    border-radius: 2rem  2rem  0px  0px;
+    border-radius: 2rem 2rem 0px 0px;
     font-family: "Caslon ExtraBold";
     font-size: 2em;
-    
-}
-#corps_form{
+  }
+  #corps_form {
     padding: 2rem;
-}
-
-
-div{
-    display : flex;
-    flex-direction: column;
-    margin : 2%;
+  }
+  
+  div input {
+    border-radius: 2rem;
+    height: 1rem;
+    padding: 1rem;
+    border-style: none;
     text-align: center;
-}
-
-
-div input{
-border-radius: 2REM;
-height : 1REM;
-padding: 1rem;
-border-style: none;
-text-align: center;
-}
-
-
-body{
-    background-image: url('./items/fond2.jpg');
+  }
+  
+  body {
+    background-image: url("./items/fond2.jpg");
     background-attachment: fixed;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
     display: flex;
     justify-content: center;
-    align-items: start; 
+    align-items: start;
     margin-top: 0;
-
+  
     font-family: "Caslon Regular";
-
-
-}
-
-body section{
+  }
+  
+  body section {
     display: flex;
     justify-content: center;
     align-items: start;
-}
-
-input#submit{
+  }
+  
+  input#submit {
     display: flex;
     justify-content: center;
     align-items: center;
     border-radius: 1rem;
-    height : 1REM;
+    height: 1rem;
     padding: 1rem;
     text-align: center;
     margin-top: 15%;
@@ -110,14 +175,12 @@ input#submit{
     transition: ease-in-out 0.5s;
     font-size: 1.5em;
     cursor: pointer;
-}
-
-input#submit:hover{
+  }
+  
+  input#submit:hover {
     color: black;
     background-color: #fce6cf;
     transform: scale(110%);
     box-shadow: 0px 0px 30px #623a2e;
-}
-
-
+  }
 
