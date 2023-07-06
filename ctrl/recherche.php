@@ -12,4 +12,3 @@ $stmt->bindParam(':dateDébut', $dateDébut);
 $stmt->bindParam(':dateFin', $dateFin);
 $stmt->execute();
 $resultats = $stmt->fetchAll(PDO::FETCH_ASSOC);
-

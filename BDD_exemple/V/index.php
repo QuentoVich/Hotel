@@ -20,20 +20,21 @@
             }
         </style>
     </head>
-
-    <h1> Réservez votre chambre de rêve</h1>
     <body>
-
         <form class="form" action="../C/execute.ctrl.php" method="post" >
             <div class="">
-                <label for="id">Identifiant :</label>
-                <input id="id" name="id" type="int" />
+                <label for="prenom">Prénom</label>
+                <input id="prenom" name="prenom" type="text" />
             </div>
             <div class="">
-                <label for="mot de passe">Mot de passe</label>
-                <input id="mdp" name="mdp" type="int" />
+                <label for="nom">Nom</label>
+                <input id="nom" name="nom" type="text" />
             </div>
 
+            <div class="">
+                <label for="sex">Sex</label>
+                <input id="sex" name="sex" type="text" />
+            </div>
             <input type="submit" id="submit" name="submit" value="Envoyer" />
         </form>
     </body>
