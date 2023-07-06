@@ -32,6 +32,12 @@ CREATE TABLE `categorie` (
   `désignation` varchar(50) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
 
+INSERT INTO `categorie` (`Code_Categorie`, `désignation`)
+VALUES
+    (1, 'Suite'),
+    (2, 'Chambre Double'),
+    (3, 'Chambre Simple');
+
 -- --------------------------------------------------------
 
 --
@@ -46,20 +52,76 @@ CREATE TABLE `chambre` (
   `Code_Categorie` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
 
+
+INSERT INTO `chambre` (`Num_Chamb`, `etage`, `prix`, `emplacement`, `Code_Categorie`)
+VALUES
+    (31, 1, 100.00, 'Vue sur la mer', 1),
+    (32, 1, 80.00, 'Vue sur la piscine', 3),
+    (33, 2, 90.00, 'Vue sur le jardin', 3),
+    (34, 2, 120.00, 'Vue panoramique', 1),
+    (35, 3, 70.00, 'Vue sur la ville', 2),
+    (36, 3, 110.00, 'Vue sur la mer', 1),
+    (37, 4, 130.00, 'Vue panoramique', 3),
+    (38, 4, 95.00, 'Vue sur le jardin', 3),
+    (39, 1, 85.00, 'Vue sur la piscine', 2),
+    (40, 2, 75.00, 'Vue sur la mer', 2),
+    (41, 3, 105.00, 'Vue sur la ville', 1),
+    (42, 4, 115.00, 'Vue panoramique', 3),
+    (43, 1, 95.00, 'Vue sur le jardin', 3),
+    (44, 2, 120.00, 'Vue sur la mer', 1),
+    (45, 3, 80.00, 'Vue sur la piscine', 2),
+    (46, 4, 110.00, 'Vue panoramique', 1),
+    (47, 1, 70.00, 'Vue sur la ville', 3),
+    (48, 2, 90.00, 'Vue sur la mer', 2),
+    (49, 3, 100.00, 'Vue sur le jardin', 1),
+    (50, 4, 125.00, 'Vue panoramique', 1),
+    (51, 1, 105.00, 'Vue sur la piscine', 2),
+    (52, 2, 85.00, 'Vue sur la mer', 3),
+    (53, 3, 115.00, 'Vue sur la ville', 3),
+    (54, 4, 75.00, 'Vue panoramique', 1),
+    (55, 1, 120.00, 'Vue sur le jardin', 3),
+    (56, 2, 70.00, 'Vue sur la mer', 3),
+    (57, 3, 90.00, 'Vue sur la piscine', 2),
+    (58, 4, 100.00, 'Vue panoramique', 1),
+    (59, 1, 110.00, 'Vue sur la ville', 1),
+    (60, 2, 95.00, 'Vue sur le jardin', 2);
+
 -- --------------------------------------------------------
 
 --
 -- Structure de la table `client`
---
+---- Ajouter des clients --
 
 CREATE TABLE `client` (
   `Code_Client` int(11) NOT NULL,
   `prenom_Client` varchar(50) DEFAULT NULL,
-  `tele_Client` smallint(6) DEFAULT NULL,
+  `tele_Client` int(11) DEFAULT NULL,
   `nationalité` varchar(50) DEFAULT NULL,
-  `num_Passe` int(11) DEFAULT NULL,
+  `num_Passe` varchar(8) DEFAULT NULL,
   `adresse_Client` varchar(50) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
+
+
+
+
+INSERT INTO `client` (Code_Client , prenom_Client , tele_Client , nationalité ,	num_Passe , adresse_Client)
+Values 
+( 1,"John",1234567890,"France","AB1C234D","123 Main Street"),
+(2,"Sophia",9876543210,"Germany","EF5G678H","456 Elm Street"),
+(3,"Michael",5678901234,"Brazil","IJ9K012L","789 Oak Street"),
+(4,"Emily",1029384756,"China","MN3P456Q","321 Pine Street"),
+(5,"Daniel",9876543210,"India","RS7T890U","987 Maple Avenue"),
+(6,"Jane",3456789012,"Mexico","VW4X567Y","123 Main Street"),
+(7,"Olivia",6789012345,"Canada","ZA1B234C","456 Elm Street"),
+(8,"Matthew",9012345678,"USA","DE5F678G","789 Oak Street"),
+(9,"Emma",5432109876,"Australia","HI9J012K","321 Pine Street"),
+(10,"Sophia",7654321098,"Germany","LM3N456P","987 Maple Avenue"),
+(11,"John",2345678901,"Canada","QR7S890T","123 Main Street"),
+(12,"David",6789012345,"USA","UV4W567X","456 Elm Street"),
+(13,"Emily",0987654321,"Japan","YZ1A234B","789 Oak Street"),
+(14,"Michael",5432109876,"China","BC2D345E","321 Pine Street"),
+(15,"Emma",2109876543,"France","FG3H456I","987 Maple Avenue");
+
 
 -- --------------------------------------------------------
 
@@ -79,7 +141,7 @@ CREATE TABLE `consulter` (
 --
 
 CREATE TABLE `reservation` (
-  `Num_Reservation` int(11) NOT NULL,
+  `Num_Reservation` int(11) NOT NULL AUTO_INCREMENT,
   `date_Reservation` date DEFAULT NULL,
   `date_Entrée` date DEFAULT NULL,
   `date_Sortie` date DEFAULT NULL,
@@ -91,13 +153,33 @@ CREATE TABLE `reservation` (
 
 --
 -- Structure de la table `utilisateur`
---
+----Ajouter des utlisateurs-- 
 
 CREATE TABLE `utilisateur` (
   `Login` varchar(50) NOT NULL,
   `mot_De_Passe` varchar(50) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
 
+
+
+
+INSERT INTO utilisateur(Login	, mot_De_Passe) 
+VALUES
+("jfqdwecx", "X%9u4Lx!7g"),
+("klpagtbh", "1mPZ@3QwJf"),
+("vykrzspn", "G@5B6g0$Hz"),
+("ujfsbnem", "9vK&Ls!z2r"),
+("wslmojxq", "R@4Q1g#9Ve"),
+("pnhgkjmr", "7b$M2!Jz4V"),
+("itzqlxow", "L3@u&8zGwP"),
+("rmjyfkdt", "$a5!E1T2Ql"),
+("ebxvcfog", "T!w0N$fu7Y"),
+("sacpylre", "2N@!kQfz3v"),
+("dzxyrcwi", "6$7J4qFnXp"),
+("qmojsnua", "Xs!K0dG2zF"),
+("ftdjvgan", "4T#1jx!vAy"),
+("hpdmzyli", "Yz$Vq6L1Ns"),
+("gnwaequr", "U0%Ql2n#sj");
 --
 -- Index pour les tables déchargées
 --
@@ -167,6 +249,3 @@ ALTER TABLE `reservation`
   ADD CONSTRAINT `reservation_ibfk_2` FOREIGN KEY (`Num_Chamb`) REFERENCES `chambre` (`Num_Chamb`);
 COMMIT;
 
-/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
-/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
-/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;

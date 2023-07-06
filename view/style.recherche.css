@@ -94,52 +94,6 @@ nav li {
 nav li:hover {
   border-bottom: 3px solid rgb(0, 0, 0);
 }
-form {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  box-shadow: 1px 1px 12px 3px #000000;
-  width: 500px;
-  height: auto;
-  margin-top: 20%;
-  margin-bottom: 20%;
-  text-align: center;
-  border-radius: 2rem;
-  background: rgb(252, 230, 207);
-  background: linear-gradient(
-    212deg,
-    rgba(252, 230, 207, 1) 18%,
-    rgba(223, 87, 35, 1) 92%
-  );
-  /* background-image: url('./items/fond2.jpg'); */
-  border: #ffffff solid;
-}
-
-label {
-  font-size: 1.8em;
-}
-
-#titre {
-  color: #ffffff;
-  text-shadow: 0px 0px 40px rgb(214, 212, 212);
-  background-color: #df5723;
-  width: 100%;
-  margin: 0;
-  border-radius: 2rem 2rem 0px 0px;
-  font-family: "Caslon ExtraBold";
-  font-size: 2em;
-}
-#corps_form {
-  padding: 2rem;
-}
-
-div input {
-  border-radius: 2rem;
-  height: 1rem;
-  padding: 1rem;
-  border-style: none;
-  text-align: center;
-}
 
 body {
   background-image: url("./items/fond2.jpg");
@@ -147,9 +101,7 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  display: flex;
-  justify-content: center;
-  align-items: start;
+
   margin-top: 0;
 
   font-family: "Caslon Regular";
@@ -161,7 +113,69 @@ body section {
   align-items: start;
 }
 
-input#submit {
+h1 {
+  font-size: 3em;
+  color: #ffffff;
+  background-color: #623a2ebe;
+  padding: 1em;
+  border-radius: 15px;
+  text-align: center;
+  width: 50%;
+}
+
+.titre {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.formulaire {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  box-shadow: 1px 1px 12px 3px #000000;
+  width: 500px;
+  height: auto;
+  margin-top: 5%;
+  margin-bottom: 20%;
+  text-align: center;
+  border-radius: 2rem;
+  background: rgb(252, 230, 207);
+  background: linear-gradient(
+    212deg,
+    rgba(252, 230, 207, 1) 18%,
+    rgba(223, 87, 35, 1) 92%
+  );
+  /* background-image: url('./items/fond2.jpg'); */
+  border: #ffffff solid;
+  padding: 2em;
+}
+
+label {
+  font-size: 1.8em;
+}
+
+div {
+  display: flex;
+  flex-direction: column;
+  margin: 2%;
+  text-align: center;
+}
+
+div input {
+  border-radius: 2rem;
+  padding: 1rem;
+  border-style: none;
+  text-align: center;
+}
+
+form input#submit {
   display: flex;
   justify-content: center;
   align-items: center;
