@@ -39,6 +39,7 @@
                     <ul>
                         <li><a href="#" alt="Mes réservations" target="_blank">Mes réservations</a></li>
                         <li><a href="#" alt="Mes informations" target="_blank">Mes informations</a></li>
+                        <li><a href="./connexion.php" alt="Deconnexion">Se deconnecter </a></li>
                     </ul>
                 </li>
             </ul>
