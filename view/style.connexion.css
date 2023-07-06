@@ -151,6 +151,10 @@ form {
   /* background-image: url('./items/fond2.jpg'); */
   border: #ffffff solid;
 }
+form label {
+    display: inline-block;
+    width: 100px;
+}
 
 #titre {
   color: #ffffff;

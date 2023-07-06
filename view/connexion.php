@@ -1,3 +1,16 @@
+<?php session_start(); ?>
+
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Connexion</title>
+        <link href = "./style.connexion.css" rel = "stylesheet">
+    </head>
+    <body>
+        <form class="form" action="../ctrl/execute.php" method="POST">
+            <div class="">
 <!DOCTYPE html>
 <html>
 
@@ -48,6 +61,9 @@
 
 
             <input type="submit" id="submit" name="submit" value="Envoyer" />
+        </form>
+    </body>
+</html>
         </DIV>
     </form>
 </section>
