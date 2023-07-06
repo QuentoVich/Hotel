@@ -15,9 +15,9 @@
                 <li>
                     <a href="#" alt="Toutes nos chambres" target="_blank">Nos chambres</a>
                     <ul>
-                        <li><a href="#" alt="Chambre Simple" target="_blank">Chambre Simple</a></li>
-                        <li><a href="#" alt="Chambre Double" target="_blank">Chambre Double</a></li>
-                        <li><a href="#" alt="Suite" target="_blank">Suite</a></li>
+                        <li><a alt="Chambre Simple" target="_blank">Chambre Simple</a></li>
+                        <li><a alt="Chambre Double" target="_blank">Chambre Double</a></li>
+                        <li><a alt="Suite" target="_blank">Suite</a></li>
                     </ul>
                 </li>
             </ul>
@@ -60,7 +60,12 @@
           ?> <br><br>Que recherchez-vous ? </h1>
   </DIV>
 
+ <div > <?php
+        if (isset($_GET['resa'])) {?>
 
+       <p class = "resa"> <?php echo $_GET['resa'];?></p>
+      <?php } ?> 
+        </div>
 
   <div class="formulaire">
 

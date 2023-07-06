@@ -27,8 +27,8 @@ class DBManager
         $stmt = $this->bdd->query($sql);
         $num_Reservation = $stmt->fetchColumn();
 
-        // Afficher le numéro de réservation
-        echo "Réservation effectuée avec succès !\nNuméro de réservation : " . $num_Reservation;
+        // Afficher le numéro de réservation et redirection vers recherche
+        header('Location:../view/recherche.php?resa=Votre  réservation n° ' . $num_Reservation . ' a été efectué avec succès !');
     }
 
     public function connexionUtilisateur(): void

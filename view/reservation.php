@@ -54,6 +54,7 @@
 
             <DIV id="corps_form">
 
+  
                 <div>
                     <label for="chambre">Chambre :</label>
                     <input type="text" name="chambre" id="chambre" value="<?php echo $chambre = $_GET['chambre']; ?>" readonly>
@@ -97,6 +98,7 @@
                 <input type="hidden" name="id_chambre" value="<?php echo $id_chambre; ?>">
 
                 <input type="submit" id="submit" name="submit" value="Reserver">
+
             </DIV>
         </form>
 
