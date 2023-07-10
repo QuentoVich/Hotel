@@ -27,38 +27,35 @@ class DBManager
         $stmt = $this->bdd->query($sql);
         $num_Reservation = $stmt->fetchColumn();
 
-        // Afficher le numéro de réservation
-        echo "Réservation effectuée avec succès !\nNuméro de réservation : " . $num_Reservation;
+        // Afficher le numéro de réservation et redirection vers recherche
+        header('Location:../view/recherche.php?resa=Votre  réservation n° ' . $num_Reservation . ' a été effectuée avec succès ! <br> Bon séjour !');
     }
 
-    public function connexionUtilisateur() : void
+    public function connexionUtilisateur(): void
     {
-       
-        if (isset($_POST['submit'])) 
-        { 
-            $id = $_POST ['id'];
-            $mdp = $_POST ['mdp'];
 
-            $db = new PDO ('mysql:host=localhost;dbname=hotel;charset=utf8mb4', 'root', '');
+        if (isset($_POST['submit'])) {
+            $id = $_POST['id'];
+            $mdp = $_POST['mdp'];
+
+            $db = new PDO('mysql:host=localhost;dbname=hotel;charset=utf8mb4', 'root', '');
 
             $sql = "SELECT * FROM utilisateur where Login = '$id' and mot_De_Passe = '$mdp'";
             $result = $db->prepare($sql);
             $result->execute();
 
-        if ($result->rowCount() > 0)
+            if ($result->rowCount() > 0) {
+                $db = $result->fetchAll();
+                $mdp = hash('sha256', $mdp);
 
-        {
-            $db = $result->fetchAll();
-            $mdp = hash('sha256', $mdp);
-
-        if ($mdp === $mdp) 
-        {
-            header('Location:../view/recherche.php');
-            $_SESSION["Login"] = $id;
-        }  
-         } else header('Location:../view/connexion.php?error_id=Identifiants incorrects, veuillez vérifier vos informations de connexion') ;
-        }        
+                if ($mdp === $mdp) {
+                    header('Location:../view/recherche.php');
+                    $_SESSION["Login"] = $id;
+                }
+            } else header('Location:../view/connexion.php?error_id=Identifiants incorrects, veuillez vérifier vos informations de connexion');
+        }
     }
+
 
 
 
@@ -73,7 +70,8 @@ class DBManager
                     SELECT Num_Chamb FROM reservation
                     WHERE (date_Entrée BETWEEN :dateEntree AND :dateSortie)
                     OR (date_Sortie BETWEEN :dateEntree AND :dateSortie)
-                )";
+                    
+                )ORDER BY chambre.prix ASC";
 
         // Préparer la requête
         $stmt = $this->bdd->prepare($sql);
@@ -91,5 +89,4 @@ class DBManager
 
         return $result;
     }
-
 }
