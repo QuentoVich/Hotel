@@ -7,7 +7,22 @@
     <link href="./style.reservation.css" rel="stylesheet">
 </head>
 
+
+<header>
+<div id="logo">
+  <div id="element3">
+                <h1>Time <br> to <br> Travel</h1>
+            </div> 
+</div>
+           
+   
+</header>
+
+
+<?php session_start() ?>
+
 <body>
+
     <section>
 
         <form class="form" action="../ctrl/ajoutReservation.php" method="post">
@@ -15,48 +30,53 @@
                 <h1>MA <br> RESERVATION</h1>
             </div>
 
+
+
             <DIV id="corps_form">
 
-                <div>
+            <div class="element_form">
                     <label for="chambre">Chambre :</label>
-                    <input type="text" name="chambre" id="chambre" required>
+                    <input type="text" name="chambre" id="chambre" value="<?php echo $chambre = $_GET['chambre']; ?>" readonly>
+
                 </div>
 
-                <div>
+
+                <div class="element_form">
                     <label for="description">Description :</label>
-                    <textarea name="description" id="description" readonly></textarea>
+                    <input type="text" name="description" id="description" value="<?php echo $_GET['emplacement']; ?>" readonly>
+
                 </div>
 
-                <div>
-                    <!-- readonly -->
-                    <label for="prix">Prix :</label>
-                    <input type="text" name="prix" id="prix" required>
+                <div class="element_form">
+                    <label for="prix">Prix par nuit :</label>
+                    <input type="text" name="prix_par_jour" id="prix_par_jour" value="<?php echo $_GET['prix']; ?>" readonly>
                 </div>
 
-                <div>
+                <div class="element_form">
                     <label for="date_debut">Date de début :</label>
-                    <input type="date" id="date_debut" name="date_debut" required>
+                    <input type="text" id="date_debut" name="date_debut" value="<?php echo $_SESSION['DATEDEBUT']; ?>" readonly>
                 </div>
 
-                <div>
+                <div class="element_form">
                     <label for="date_fin">Date de fin :</label>
-                    <input type="date" id="date_fin" name="date_fin" required>
+                    <input type="text" id="date_fin" name="date_fin" value="<?php echo $_SESSION['DATEFIN']; ?>" readonly>
                 </div>
 
-                <div>
-                    <label for="Code_Client">Code  client :</label>
+                <div class="element_form">
+                    <label for="Code_Client">Code client :</label>
                     <input type="int" name="Code_Client" id="Code_Client" required>
                 </div>
 
-                <div>
-                    <label for="nom">Nom :</label>
-                    <input type="text" name="nom" id="nom" required>
-                </div>
+              
 
-        
+<div id="check">
                 <input type="hidden" name="id_chambre" value="<?php echo $id_chambre; ?>">
+                
+                <a href="./recherche.php" alt="retour à la recherche" class = modif >Modifier mes dates</a>
 
                 <input type="submit" id="submit" name="submit" value="Reserver">
+
+</div>
             </DIV>
         </form>
 
@@ -67,5 +87,7 @@
 
 
 </body>
+
+
 
 </html>

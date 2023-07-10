@@ -1,0 +1,243 @@
+@font-face {
+    font-family: "Caslon Semi_Bold";
+    src: url(./items/Font/F37Caslon-SemiBoldDisplay.otf);
+  }
+  
+  @font-face {
+    font-family: "Caslon Regular";
+    src: url(./items/Font/F37Caslon-RegularDisplay.otf);
+  }
+  
+  @font-face {
+    font-family: "Caslon ExtraBold";
+    src: url(./items/Font/F37Caslon-ExtraBoldDisplay.otf);
+  }
+  
+  * {
+    padding: 0px;
+    margin: 0px;
+  }
+  
+  ul ul {
+    display: none;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease-in-out, visibility 0s linear 0.3s;
+  }
+  
+  ul li:hover > ul {
+    display: block;
+    opacity: 1;
+    visibility: visible;
+    transition-delay: 0s;
+  }
+  
+  li:hover {
+    color: #df5723;
+  }
+  
+  header {
+    background-color: #45b398;
+    text-align: center;
+    padding: 20px;
+  }
+  
+  #logo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  /* Style du menu */
+  header nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  header nav ul li {
+    display: inline-block;
+    position: relative;
+  }
+  
+  header nav ul li a {
+    display: block;
+    padding: 10px 20px 2px 20px;
+    color: #000;
+    text-decoration: none;
+  }
+  
+  header nav ul ul {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #fff;
+    padding: 0;
+    transition: ease-in-out 0.5s;
+  }
+  
+  header nav ul ul li {
+    width: 100%;
+    display: block;
+    transition: ease-in-out 0.5s;
+  }
+  
+  header nav ul ul li:hover {
+    background-color: #df5723;
+    color: #fff;
+  }
+  
+  header nav ul ul li a {
+    padding: 10px 40px;
+  }
+  #elemnt2{
+    margin-left: 5%;
+    margin-right: 10%;
+  }
+  
+  #element3{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "The Rustic";
+    font-size: 1.5em;
+    color: #fad1a5;
+    border-radius: 50px;
+    background: #45b398;
+    box-shadow:  20px 20px 60px #3b9881,
+                 -20px -20px 60px #4fceaf;
+    padding: 30px;
+    width: 20%;
+   
+  }
+  
+  
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+  }
+  #el_nav1{
+    display: flex;
+    justify-content: space-around;
+  }
+  nav li {
+    font-size: 1.2em;
+    transition: ease-in-out 0.1s;
+    padding-bottom: 1px;
+  }
+  nav li:hover {
+    border-bottom: 3px solid rgb(0, 0, 0);
+  }
+  nav {
+    display: flex;
+  }
+  nav li {
+    transition: ease-in-out 0.1s;
+    padding-bottom: 1px;
+  }
+  nav li:hover {
+    border-bottom: 3px solid rgb(0, 0, 0);
+  }
+  
+  body {
+    font-family: "Caslon Regular";
+    background-image: url("./items/fond_connexion.jpg");
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+  
+  #element3 {
+    font-family: "Caslon ExtraBold";
+    text-align: center;
+    font-size: 2em;
+  }
+  
+  section h1{
+    font-size: 2em;
+  }
+  
+  .chambres {
+    background-color: rgba(250, 235, 215, 0.726);
+    margin: 5%;
+    padding: 5%;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .carte_chambre {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    background-color: #fff5da;
+    background-image: url("./items/chambre.jpg");
+    background-position-x: 500px;
+    margin: 5%;
+    box-shadow: 0px 0px 20px black;
+    border-radius: 10px;
+    padding: 5%;
+    transition: all ease-in-out 0.8s;
+    width: 40%;
+    text-align: center;
+    background-repeat: no-repeat;
+    transform: scale(80%);
+  }
+  
+  .carte_chambre:hover {
+    box-shadow: 0px 10px 20px rgb(255, 145, 0);
+    width: 70%;
+    background-position: center;
+    font-size: 110%;
+    transform: scale(90%);
+  }
+  
+  .carte_chambre div {
+    margin: 2%;
+  }
+  
+  .bouton_reservation {
+    background-color: #45b398;
+    padding: 10%;
+    width: 30%;
+    height: 30%;
+    border-radius: 15px;
+    text-align: center;
+    transition: ease-in-out 0.5s;
+    text-decoration: none;
+    color: aliceblue;
+  }
+  .bouton_reservation:hover {
+    background-color: #00a171;
+    border-radius: 20px;
+    box-shadow: 0px 0px 20px black;
+  }
+  
+  .bouton_reservation a {
+    text-decoration: none;
+    color: aliceblue;
+  }
+  .info_chambre {
+    background-color: rgba(240, 248, 255, 0.829);
+    padding: 20px;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-items: space-around;
+    align-items: center;
+    width: 50%;
+    transition: ease-in-out 0.5s;
+  }
+  .info_chambre:hover {
+    font-size: 1.2em;
+  }
+  
+  .info_chambre div {
+    margin-bottom: 15%;
+  }
